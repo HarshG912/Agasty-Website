@@ -9,8 +9,9 @@
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap');
         body { font-family: 'Inter', sans-serif; scroll-behavior: smooth; }
-        .glass { background: rgba(255, 255, 255, 0.05); backdrop-filter: blur(10px); }
+        .glass { background: rgba(15, 23, 42, 0.8); backdrop-filter: blur(12px); }
         .gradient-text { background: linear-gradient(90deg, #60a5fa, #a855f7); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+        .card-hover:hover { transform: translateY(-5px); transition: all 0.3s ease; }
     </style>
 </head>
 <body class="bg-slate-900 text-slate-100">
@@ -21,67 +22,99 @@
             <div class="hidden md:flex space-x-8 text-sm font-medium">
                 <a href="#home" class="hover:text-blue-400 transition">Home</a>
                 <a href="#services" class="hover:text-blue-400 transition">Services</a>
-                <a href="#about" class="hover:text-blue-400 transition">About</a>
-                <a href="#contact" class="bg-blue-600 hover:bg-blue-700 px-4 py-2 rounded-lg transition">Get Started</a>
+                <a href="#projects" class="hover:text-blue-400 transition">Projects</a>
+                <a href="#contact" class="bg-blue-600 hover:bg-blue-700 px-4 py-2 rounded-lg transition">Contact</a>
             </div>
         </div>
     </nav>
 
-    <section id="home" class="pt-32 pb-20 px-6">
+    <section id="home" class="pt-40 pb-20 px-6">
         <div class="max-w-7xl mx-auto text-center">
-            <h1 class="text-5xl md:text-7xl font-bold mb-6">Innovating the Future with <span class="gradient-text">Intelligence</span></h1>
+            <h1 class="text-5xl md:text-7xl font-bold mb-6">Building the <span class="gradient-text">Digital Backbone</span></h1>
             <p class="text-slate-400 text-lg md:text-xl max-w-2xl mx-auto mb-10">
-                Agasty Enterprises delivers bespoke Application Development and cutting-edge AI solutions to scale your business into the cloud era.
+                Agasty Enterprises specializes in mission-critical application development and seamless AI integration.
             </p>
             <div class="flex justify-center space-x-4">
-                <a href="#services" class="px-8 py-3 bg-blue-600 rounded-full font-semibold hover:shadow-lg hover:shadow-blue-500/30 transition">Our Expertise</a>
-                <a href="#contact" class="px-8 py-3 border border-slate-700 rounded-full font-semibold hover:bg-slate-800 transition">Contact Us</a>
+                <a href="#projects" class="px-8 py-3 bg-blue-600 rounded-full font-semibold hover:shadow-lg hover:shadow-blue-500/30 transition">View Our Work</a>
+                <a href="#contact" class="px-8 py-3 border border-slate-700 rounded-full font-semibold hover:bg-slate-800 transition">Let's Talk</a>
             </div>
         </div>
     </section>
 
-    <section id="services" class="py-20 bg-slate-800/50">
+    <section id="services" class="py-20 bg-slate-800/30">
         <div class="max-w-7xl mx-auto px-6">
-            <h2 class="text-3xl font-bold mb-12 text-center">Our Core Services</h2>
-            <div class="grid md:grid-cols-3 gap-8">
-                <div class="p-8 rounded-2xl bg-slate-900 border border-slate-700 hover:border-blue-500 transition">
-                    <i class="fas fa-mobile-alt text-4xl text-blue-500 mb-6"></i>
-                    <h3 class="text-xl font-bold mb-4">Application Development</h3>
-                    <p class="text-slate-400">High-performance mobile and web apps built with React, Flutter, and cloud-native architectures.</p>
+            <div class="text-center mb-16">
+                <h2 class="text-3xl font-bold">Expertise</h2>
+                <div class="h-1 w-20 bg-blue-500 mx-auto mt-4"></div>
+            </div>
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="p-8 rounded-2xl bg-slate-900 border border-slate-800 card-hover">
+                    <i class="fas fa-code text-4xl text-blue-500 mb-6"></i>
+                    <h3 class="text-xl font-bold mb-4">Custom App Dev</h3>
+                    <p class="text-slate-400">Scalable full-stack solutions tailored to industrial and commercial requirements.</p>
                 </div>
-                <div class="p-8 rounded-2xl bg-slate-900 border border-slate-700 hover:border-purple-500 transition">
-                    <i class="fas fa-brain text-4xl text-purple-500 mb-6"></i>
-                    <h3 class="text-xl font-bold mb-4">AI & Machine Learning</h3>
-                    <p class="text-slate-400">Integrating LLMs, predictive analytics, and automated workflows into your existing ecosystem.</p>
+                <div class="p-8 rounded-2xl bg-slate-900 border border-slate-800 card-hover">
+                    <i class="fas fa-microchip text-4xl text-purple-500 mb-6"></i>
+                    <h3 class="text-xl font-bold mb-4">AI Integration</h3>
+                    <p class="text-slate-400">Deploying intelligent automation and LLM-powered tools to optimize workflows.</p>
                 </div>
-                <div class="p-8 rounded-2xl bg-slate-900 border border-slate-700 hover:border-cyan-500 transition">
-                    <i class="fas fa-cloud text-4xl text-cyan-500 mb-6"></i>
+                <div class="p-8 rounded-2xl bg-slate-900 border border-slate-800 card-hover">
+                    <i class="fas fa-database text-4xl text-cyan-500 mb-6"></i>
                     <h3 class="text-xl font-bold mb-4">Cloud Infrastructure</h3>
-                    <p class="text-slate-400">Scalable, secure, and cost-optimized cloud migrations for modern enterprises.</p>
+                    <p class="text-slate-400">Secure database management and cloud-native architecture for high availability.</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <section id="contact" class="py-20 px-6">
-        <div class="max-w-4xl mx-auto bg-slate-800 rounded-3xl p-8 md:p-12 border border-slate-700">
-            <div class="text-center mb-10">
-                <h2 class="text-3xl font-bold">Work with Agasty</h2>
-                <p class="text-slate-400 mt-2">Tell us about your project and let's build something great.</p>
+    <section id="projects" class="py-20 px-6">
+        <div class="max-w-7xl mx-auto">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl font-bold">Featured Applications</h2>
+                <p class="text-slate-400 mt-2">Specialized tools developed by Agasty Enterprises</p>
             </div>
-            <form action="#" class="space-y-6">
-                <div class="grid md:grid-cols-2 gap-6">
-                    <input type="text" placeholder="Your Name" class="w-full bg-slate-900 border border-slate-700 rounded-lg p-3 focus:outline-none focus:border-blue-500">
-                    <input type="email" placeholder="Email Address" class="w-full bg-slate-900 border border-slate-700 rounded-lg p-3 focus:outline-none focus:border-blue-500">
+            <div class="grid md:grid-cols-2 gap-12">
+                <div class="group relative overflow-hidden rounded-3xl bg-slate-800 border border-slate-700 p-8">
+                    <h3 class="text-2xl font-bold mb-2">RailBlock</h3>
+                    <span class="text-xs font-bold uppercase tracking-widest text-blue-400">Industrial Management</span>
+                    <p class="text-slate-400 mt-4 mb-6">A digital management application designed specifically for railway block systems and power supply monitoring.</p>
+                    <div class="flex space-x-3">
+                        <span class="px-3 py-1 bg-slate-900 rounded-md text-xs border border-slate-700">Real-time Data</span>
+                        <span class="px-3 py-1 bg-slate-900 rounded-md text-xs border border-slate-700">Automation</span>
+                    </div>
                 </div>
-                <textarea rows="4" placeholder="How can we help?" class="w-full bg-slate-900 border border-slate-700 rounded-lg p-3 focus:outline-none focus:border-blue-500"></textarea>
-                <button type="submit" class="w-full bg-blue-600 py-3 rounded-lg font-bold hover:bg-blue-700 transition">Send Message</button>
-            </form>
+                <div class="group relative overflow-hidden rounded-3xl bg-slate-800 border border-slate-700 p-8">
+                    <h3 class="text-2xl font-bold mb-2">Scan The Table</h3>
+                    <span class="text-xs font-bold uppercase tracking-widest text-purple-400">Hospitality Tech</span>
+                    <p class="text-slate-400 mt-4 mb-6">A QR-based contactless dining and restaurant management platform to streamline service and analytics.</p>
+                    <div class="flex space-x-3">
+                        <span class="px-3 py-1 bg-slate-900 rounded-md text-xs border border-slate-700">QR Integration</span>
+                        <span class="px-3 py-1 bg-slate-900 rounded-md text-xs border border-slate-700">SaaS</span>
+                    </div>
+                </div>
+            </div>
         </div>
     </section>
 
-    <footer class="py-10 border-t border-slate-800 text-center">
-        <p class="text-slate-500 text-sm">© 2026 Agasty Enterprises. All rights reserved. <br> <span class="text-blue-400">agasty.cloud</span></p>
+    <section id="contact" class="py-20 bg-slate-800/30 px-6">
+        <div class="max-w-4xl mx-auto text-center">
+            <h2 class="text-4xl font-bold mb-8">Start Your Next Project</h2>
+            <p class="text-slate-400 mb-10">Available for consultation on application architecture and AI strategy.</p>
+            <a href="mailto:contact@agasty.cloud" class="inline-block px-10 py-4 bg-blue-600 rounded-full font-bold text-lg hover:bg-blue-700 transition">Get in Touch</a>
+        </div>
+    </section>
+
+    <footer class="py-12 border-t border-slate-800">
+        <div class="max-w-7xl mx-auto px-6 flex flex-col md:flex-row justify-between items-center space-y-6 md:space-y-0">
+            <div class="text-center md:text-left">
+                <div class="text-xl font-bold">AGASTY<span class="text-blue-500">.CLOUD</span></div>
+                <p class="text-slate-500 text-sm mt-1">© 2026 Agasty Enterprises. All rights reserved.</p>
+            </div>
+            <div class="flex space-x-6 text-sm font-medium">
+                <a href="privacy.html" class="text-slate-400 hover:text-blue-400 transition">Privacy Policy</a>
+                <a href="terms.html" class="text-slate-400 hover:text-blue-400 transition">Terms of Service</a>
+            </div>
+        </div>
     </footer>
 
 </body>
