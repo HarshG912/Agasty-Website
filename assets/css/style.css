@@ -236,6 +236,10 @@ section[id] {
 }
 
 /* Pointer Cursor Enforcement for All Interactive Elements */
-button, a, input[type="range"], .estimator-option, .faq-question {
+button,
+a,
+input[type="range"],
+.estimator-option,
+.faq-question {
     cursor: pointer;
 }

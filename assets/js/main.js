@@ -561,7 +561,7 @@ function initEmbeddedFormModal() {
     }
 
     // Expose globally so inline onclick or other scripts can call them directly
-    window.openConsultationModal = function(e, customUrl) {
+    window.openConsultationModal = function (e, customUrl) {
         if (e) {
             if (e.preventDefault) e.preventDefault();
             if (e.stopPropagation) e.stopPropagation();
@@ -569,7 +569,7 @@ function initEmbeddedFormModal() {
         openModal(customUrl);
     };
 
-    window.closeConsultationModal = function(e) {
+    window.closeConsultationModal = function (e) {
         if (e) {
             if (e.preventDefault) e.preventDefault();
             if (e.stopPropagation) e.stopPropagation();
