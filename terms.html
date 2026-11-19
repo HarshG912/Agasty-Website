@@ -1,26 +1,106 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="scroll-smooth">
 <head>
     <meta charset="UTF-8">
-    <title>Terms & Conditions - RailBlock</title>
-    <style>body { font-family: sans-serif; line-height: 1.6; padding: 40px; max-width: 800px; margin: auto; color: #333; }</style>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Terms &amp; Conditions - RailBlock | Agasty Enterprises</title>
+    <meta name="theme-color" content="#030712">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" rel="stylesheet">
+    <link href="assets/css/style.css" rel="stylesheet">
 </head>
-<body>
-    <h1>Terms and Conditions</h1>
-    <p>Last Updated: May 9, 2026</p>
+<body class="bg-slate-950 text-slate-100 min-h-screen relative flex flex-col justify-between selection:bg-purple-600 selection:text-white">
 
-    <h2>1. Acceptance of Terms</h2>
-    <p>By downloading or using the RailBlock application, these terms will automatically apply to you. You should make sure that you read them carefully before using the app.</p>
+    <!-- Navigation Header -->
+    <header class="fixed top-0 left-0 w-full z-50 glass border-b border-white/[0.07]">
+        <div class="max-w-6xl mx-auto px-6 py-4 flex justify-between items-center">
+            <a href="index.html" class="flex items-center gap-3">
+                <div class="w-10 h-10 rounded-xl bg-gradient-to-tr from-purple-600 to-blue-600 flex items-center justify-center text-white shadow-lg">
+                    <i class="fas fa-cube text-lg"></i>
+                </div>
+                <div class="text-xl font-extrabold tracking-tight">AGASTY<span class="text-blue-500">.CLOUD</span></div>
+            </a>
+            <a href="index.html" class="text-xs font-mono text-slate-400 hover:text-white flex items-center gap-2 px-3 py-1.5 rounded-lg bg-slate-900 border border-slate-800 transition">
+                <i class="fas fa-arrow-left"></i>
+                <span>Back to Home</span>
+            </a>
+        </div>
+    </header>
 
-    <h2>2. Professional Use Only</h2>
-    <p>RailBlock is designed for authorized railway personnel. Users are responsible for ensuring that all data entered into the system regarding railway blocks is accurate and follows official safety protocols. Agasty Enterprises is not liable for operational errors resulting from incorrect data entry.</p>
+    <main class="pt-36 pb-24 px-6 flex-grow">
+        <div class="max-w-4xl mx-auto">
+            <!-- Header Card -->
+            <div class="p-8 md:p-12 rounded-3xl bg-gradient-to-br from-purple-950/40 via-slate-900 to-slate-950 border border-purple-500/20 mb-10 shadow-2xl relative overflow-hidden">
+                <div class="inline-flex items-center gap-2 px-3 py-1 rounded-md bg-purple-500/10 border border-purple-500/30 text-purple-400 text-xs font-mono font-semibold uppercase mb-4">
+                    <i class="fas fa-train"></i> Operational Software
+                </div>
+                <h1 class="text-3xl md:text-5xl font-black tracking-tight mb-3">Terms &amp; Conditions</h1>
+                <p class="text-slate-400 text-sm md:text-base">RailBlock Application &bull; Last Updated: May 9, 2026</p>
+            </div>
 
-    <h2>3. Intellectual Property</h2>
-    <p>The app itself, and all the trademarks, copyright, database rights, and other intellectual property rights related to it, belong to Agasty Enterprises.</p>
+            <!-- Content Card -->
+            <div class="p-8 md:p-12 rounded-3xl glass-card border border-white/10 space-y-8 text-slate-300 leading-relaxed">
+                <div>
+                    <h2 class="text-xl font-bold text-white mb-3 flex items-center gap-3">
+                        <span class="w-7 h-7 rounded-lg bg-purple-500/20 text-purple-400 text-xs flex items-center justify-center font-mono">1</span>
+                        <span>Acceptance of Terms</span>
+                    </h2>
+                    <p class="text-slate-400 text-base">
+                        By downloading, installing, accessing, or using the RailBlock application, these terms will automatically apply to you. You must ensure that you read them thoroughly and agree to adhere to all guidelines before utilizing the application or any associated backend endpoints.
+                    </p>
+                </div>
 
-    <h2>4. Limitation of Liability</h2>
-    <p>Agasty Enterprises will not be liable for any indirect, incidental, or consequential damages arising out of the use or inability to use the service.</p>
+                <div class="border-t border-slate-800 pt-8">
+                    <h2 class="text-xl font-bold text-white mb-3 flex items-center gap-3">
+                        <span class="w-7 h-7 rounded-lg bg-purple-500/20 text-purple-400 text-xs flex items-center justify-center font-mono">2</span>
+                        <span>Professional &amp; Authorized Personnel Use Only</span>
+                    </h2>
+                    <p class="text-slate-400 text-base mb-4">
+                        RailBlock is custom-engineered specifically for authorized railway operators, station masters, and maintenance engineers. Users are solely responsible for ensuring that all data entered into the system regarding railway blocks, section occupations, and signal coordinates is verified, accurate, and adheres strictly to official railway safety codes and standard operating procedures.
+                    </p>
+                    <div class="p-4 rounded-2xl bg-amber-950/30 border border-amber-500/30 text-amber-300 text-sm flex items-start gap-3">
+                        <i class="fas fa-triangle-exclamation mt-1"></i>
+                        <span>Agasty Enterprises is not liable for operational downtime, routing errors, or safety discrepancies resulting from unauthorized usage, incorrect manual data inputs, or failure to follow official railway safety protocol.</span>
+                    </div>
+                </div>
 
-    <p><strong>Contact Us:</strong> support@agasty.cloud</p>
+                <div class="border-t border-slate-800 pt-8">
+                    <h2 class="text-xl font-bold text-white mb-3 flex items-center gap-3">
+                        <span class="w-7 h-7 rounded-lg bg-purple-500/20 text-purple-400 text-xs flex items-center justify-center font-mono">3</span>
+                        <span>Intellectual Property &amp; Trademarks</span>
+                    </h2>
+                    <p class="text-slate-400 text-base">
+                        The RailBlock application, including its proprietary interface designs, fail-safe algorithmic modules, database architectures, trademarks, logos, and copyright materials, are the sole intellectual property of Agasty Enterprises. Unauthorized reverse-engineering, decompilation, or sublicensing is strictly prohibited.
+                    </p>
+                </div>
+
+                <div class="border-t border-slate-800 pt-8">
+                    <h2 class="text-xl font-bold text-white mb-3 flex items-center gap-3">
+                        <span class="w-7 h-7 rounded-lg bg-purple-500/20 text-purple-400 text-xs flex items-center justify-center font-mono">4</span>
+                        <span>Limitation of Liability</span>
+                    </h2>
+                    <p class="text-slate-400 text-base">
+                        To the maximum extent permitted by applicable law, Agasty Enterprises, its directors, developers, and partners shall not be held liable for any indirect, incidental, punitive, or consequential damages resulting from the use or inability to use the RailBlock service.
+                    </p>
+                </div>
+
+                <div class="border-t border-slate-800 pt-8 flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4 bg-slate-900/60 p-6 rounded-2xl">
+                    <div>
+                        <div class="text-xs font-mono text-slate-500">SUPPORT &amp; LEGAL INQUIRIES</div>
+                        <div class="text-lg font-bold text-white">support@agasty.cloud</div>
+                    </div>
+                    <a href="mailto:support@agasty.cloud" class="px-5 py-2.5 bg-purple-600 hover:bg-purple-500 text-white rounded-xl text-sm font-semibold transition">
+                        Contact Legal Team
+                    </a>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="py-8 border-t border-white/[0.08] px-6 text-center text-xs text-slate-500 font-mono">
+        &copy; 2026 Agasty Enterprises. All rights reserved. &bull; <a href="index.html" class="hover:text-white underline">Home</a> &bull; <a href="privacy.html" class="hover:text-white underline">Privacy Policy</a>
+    </footer>
+
 </body>
 </html>

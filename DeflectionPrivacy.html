@@ -1,398 +1,173 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="scroll-smooth">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Privacy Policy - OHE Records</title>
-    <style>
-        :root {
-            --primary: #0284C7;
-            --primary-dark: #0369A1;
-            --accent: #0EA5E9;
-            --text-main: #1E293B;
-            --text-muted: #64748B;
-            --bg-page: #F8FAFC;
-            --card-bg: #FFFFFF;
-            --border: #E2E8F0;
-            --badge-bg: #E0F2FE;
-            --badge-text: #0369A1;
-        }
-
-        * {
-            box-sizing: border-box;
-            margin: 0;
-            padding: 0;
-        }
-
-        body {
-            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-            background-color: var(--bg-page);
-            color: var(--text-main);
-            line-height: 1.65;
-            padding: 24px 16px 60px;
-        }
-
-        .container {
-            max-width: 860px;
-            margin: 0 auto;
-        }
-
-        header {
-            background: linear-gradient(135deg, #0284C7, #075985);
-            color: #FFFFFF;
-            padding: 40px 32px;
-            border-radius: 16px;
-            box-shadow: 0 10px 25px -5px rgba(2, 132, 199, 0.25);
-            margin-bottom: 32px;
-        }
-
-        .app-badge {
-            display: inline-block;
-            background: rgba(255, 255, 255, 0.2);
-            color: #FFFFFF;
-            padding: 4px 12px;
-            border-radius: 20px;
-            font-size: 13px;
-            font-weight: 600;
-            letter-spacing: 0.5px;
-            margin-bottom: 12px;
-            text-transform: uppercase;
-        }
-
-        header h1 {
-            font-size: 30px;
-            font-weight: 800;
-            margin-bottom: 8px;
-            letter-spacing: -0.5px;
-        }
-
-        header p {
-            font-size: 15px;
-            color: #E0F2FE;
-        }
-
-        .meta-info {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 16px;
-            margin-top: 20px;
-            padding-top: 16px;
-            border-top: 1px solid rgba(255, 255, 255, 0.2);
-            font-size: 13px;
-            color: #BAE6FD;
-        }
-
-        .card {
-            background: var(--card-bg);
-            border: 1px solid var(--border);
-            border-radius: 14px;
-            padding: 28px 30px;
-            margin-bottom: 24px;
-            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
-        }
-
-        h2 {
-            font-size: 20px;
-            font-weight: 700;
-            color: var(--primary-dark);
-            margin-bottom: 16px;
-            display: flex;
-            align-items: center;
-            gap: 10px;
-        }
-
-        h3 {
-            font-size: 16px;
-            font-weight: 600;
-            color: var(--text-main);
-            margin: 18px 0 8px;
-        }
-
-        p {
-            font-size: 15px;
-            margin-bottom: 12px;
-            color: #334155;
-        }
-
-        ul {
-            list-style: none;
-            padding-left: 0;
-            margin-bottom: 14px;
-        }
-
-        li {
-            position: relative;
-            padding-left: 24px;
-            margin-bottom: 10px;
-            font-size: 14.5px;
-            color: #334155;
-        }
-
-        li::before {
-            content: "•";
-            position: absolute;
-            left: 8px;
-            top: 0;
-            color: var(--primary);
-            font-weight: bold;
-            font-size: 18px;
-            line-height: 1.2;
-        }
-
-        .permission-table {
-            width: 100%;
-            border-collapse: collapse;
-            margin-top: 14px;
-            margin-bottom: 8px;
-            font-size: 14px;
-        }
-
-        .permission-table th, .permission-table td {
-            text-align: left;
-            padding: 12px 14px;
-            border-bottom: 1px solid var(--border);
-        }
-
-        .permission-table th {
-            background-color: #F1F5F9;
-            color: #475569;
-            font-weight: 600;
-            font-size: 13px;
-            text-transform: uppercase;
-            letter-spacing: 0.5px;
-        }
-
-        .permission-table code {
-            background: #F1F5F9;
-            color: #0F172A;
-            padding: 2px 6px;
-            border-radius: 4px;
-            font-size: 12.5px;
-            font-family: Consolas, monospace;
-        }
-
-        .third-party-list a {
-            color: var(--primary);
-            text-decoration: none;
-            font-weight: 600;
-        }
-
-        .third-party-list a:hover {
-            text-decoration: underline;
-        }
-
-        .highlight-box {
-            background: #EFF6FF;
-            border-left: 4px solid var(--primary);
-            padding: 16px 20px;
-            border-radius: 0 10px 10px 0;
-            margin: 16px 0;
-            font-size: 14.5px;
-            color: #1E3A8A;
-        }
-
-        footer {
-            text-align: center;
-            font-size: 13px;
-            color: var(--text-muted);
-            margin-top: 40px;
-            padding-top: 24px;
-            border-top: 1px solid var(--border);
-        }
-
-        @media (max-width: 640px) {
-            body {
-                padding: 12px 8px 40px;
-            }
-            header {
-                padding: 24px 20px;
-            }
-            .card {
-                padding: 20px 18px;
-            }
-            .permission-table th, .permission-table td {
-                padding: 10px 8px;
-                font-size: 13px;
-            }
-        }
-    </style>
+    <title>Privacy Policy - OHE Records &amp; Deflection | Agasty Enterprises</title>
+    <meta name="theme-color" content="#030712">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" rel="stylesheet">
+    <link href="assets/css/style.css" rel="stylesheet">
 </head>
-<body>
+<body class="bg-slate-950 text-slate-100 min-h-screen relative flex flex-col justify-between selection:bg-blue-600 selection:text-white">
 
-<div class="container">
-    <header>
-        <span class="app-badge">Application Privacy Policy</span>
-        <h1>OHE Records</h1>
-        <p>Overhead Equipment & Traction Engineering Management System</p>
-        <div class="meta-info">
-            <span><strong>Package:</strong> com.harsh.deflection</span>
-            <span><strong>Developer:</strong> Harsh</span>
-            <span><strong>Contact:</strong> hgodse912@gmail.com</span>
-            <span><strong>Effective Date:</strong> November 18, 2026</span>
+    <!-- Header Navigation -->
+    <header class="fixed top-0 left-0 w-full z-50 glass border-b border-white/[0.07]">
+        <div class="max-w-6xl mx-auto px-6 py-4 flex justify-between items-center">
+            <a href="index.html" class="flex items-center gap-3">
+                <div class="w-10 h-10 rounded-xl bg-gradient-to-tr from-blue-600 via-indigo-600 to-purple-600 flex items-center justify-center text-white shadow-lg">
+                    <i class="fas fa-cube text-lg"></i>
+                </div>
+                <div class="text-xl font-extrabold tracking-tight">AGASTY<span class="text-blue-500">.CLOUD</span></div>
+            </a>
+            <a href="index.html" class="text-xs font-mono text-slate-400 hover:text-white flex items-center gap-2 px-3 py-1.5 rounded-lg bg-slate-900 border border-slate-800 transition">
+                <i class="fas fa-arrow-left"></i>
+                <span>Back to Home</span>
+            </a>
         </div>
     </header>
 
-    <div class="card">
-        <h2>1. Overview & Commitment</h2>
-        <p>
-            <strong>OHE Records</strong> ("we", "our", or "the App") is an engineering and field utility application designed for railway traction power engineers, supervisors, and technicians. The App provides tools for measuring Overhead Equipment (OHE) mast deflection using device sensors and camera-based photogrammetry, calculating Traction Sub-Station (TSS) fault tripping distances, storing field records, and managing emergency quota requisitions and automations.
-        </p>
-        <p>
-            We take your privacy seriously. This Privacy Policy explains how our application collects, uses, handles, and protects your information when you use the OHE Records mobile application.
-        </p>
-    </div>
+    <main class="pt-36 pb-24 px-6 flex-grow">
+        <div class="max-w-4xl mx-auto">
+            <!-- Header Card -->
+            <div class="p-8 md:p-12 rounded-3xl bg-gradient-to-br from-blue-950/40 via-slate-900 to-slate-950 border border-blue-500/20 mb-10 shadow-2xl relative overflow-hidden">
+                <div class="inline-flex items-center gap-2 px-3 py-1 rounded-md bg-blue-500/10 border border-blue-500/30 text-blue-400 text-xs font-mono font-semibold uppercase mb-4">
+                    <i class="fas fa-ruler-combined"></i> Traction Power &amp; Photogrammetry
+                </div>
+                <h1 class="text-3xl md:text-5xl font-black tracking-tight mb-3">Privacy Policy &bull; OHE Records &amp; Deflection</h1>
+                <p class="text-slate-400 text-sm md:text-base mb-6">Overhead Equipment &amp; Traction Engineering Management System</p>
+                
+                <div class="grid grid-cols-2 sm:grid-cols-4 gap-3 text-xs font-mono">
+                    <div class="p-2.5 rounded-xl bg-slate-900/80 border border-slate-800">
+                        <span class="text-slate-500 block">PACKAGE</span>
+                        <span class="text-slate-200 font-bold">com.harsh.deflection</span>
+                    </div>
+                    <div class="p-2.5 rounded-xl bg-slate-900/80 border border-slate-800">
+                        <span class="text-slate-500 block">DEVELOPER</span>
+                        <span class="text-slate-200 font-bold">Harsh (Agasty)</span>
+                    </div>
+                    <div class="p-2.5 rounded-xl bg-slate-900/80 border border-slate-800">
+                        <span class="text-slate-500 block">CONTACT</span>
+                        <span class="text-blue-400 font-bold truncate block">hgodse912@gmail.com</span>
+                    </div>
+                    <div class="p-2.5 rounded-xl bg-slate-900/80 border border-slate-800">
+                        <span class="text-slate-500 block">EFFECTIVE</span>
+                        <span class="text-slate-200 font-bold">November 18, 2026</span>
+                    </div>
+                </div>
+            </div>
 
-    <div class="card">
-        <h2>2. Information We Collect and How We Use It</h2>
-        
-        <h3>A. Account and Authentication Information</h3>
-        <p>
-            When you register or sign in to OHE Records to synchronize your records across devices or access organization features, we collect:
-        </p>
-        <ul>
-            <li><strong>Email Address:</strong> Used strictly to authenticate your account, secure your profile, and deliver OTP / password recovery verifications.</li>
-            <li><strong>Organization Association:</strong> If you join or manage an organization (such as a railway division or board), your membership and delegated role (e.g., Admin, Member) are associated with your account.</li>
-        </ul>
+            <!-- Content Container -->
+            <div class="p-8 md:p-12 rounded-3xl glass-card border border-white/10 space-y-8 text-slate-300 leading-relaxed">
+                
+                <div>
+                    <h2 class="text-xl font-bold text-white mb-3 flex items-center gap-3">
+                        <span class="w-7 h-7 rounded-lg bg-blue-500/20 text-blue-400 text-xs flex items-center justify-center font-mono">1</span>
+                        <span>Overview &amp; Engineering Scope</span>
+                    </h2>
+                    <p class="text-slate-400 text-base leading-relaxed">
+                        <strong>OHE Records / Deflection</strong> (&ldquo;we&rdquo;, &ldquo;our&rdquo;, or &ldquo;the App&rdquo;) is an engineering utility designed for railway traction power engineers, supervisors, and technicians. The application provides precision tools for measuring Overhead Equipment (OHE) mast deflection using internal smartphone sensors and camera-based photogrammetry, calculating Traction Sub-Station (TSS) fault tripping distances, storing field records, and managing emergency quota requisitions.
+                    </p>
+                </div>
 
-        <h3>B. Mast Deflection & Sensor Data</h3>
-        <p>
-            The App utilizes internal device sensors (Gyroscope, Accelerometer, and Gravity sensors) to determine real-time mast deflection angles:
-        </p>
-        <ul>
-            <li><strong>Sensor Readings:</strong> Calculated locally in-memory on your device in real-time. Raw sensor streams are never uploaded, logged, or transmitted to any external server.</li>
-            <li><strong>Deflection Records:</strong> When you choose to save a measurement (mast location, chainage, track name, measured angle, and calculated deflection in mm), the record is saved locally on your device and, if signed in, synchronized to your organization's secure cloud database.</li>
-        </ul>
+                <div class="border-t border-slate-800 pt-8">
+                    <h2 class="text-xl font-bold text-white mb-4 flex items-center gap-3">
+                        <span class="w-7 h-7 rounded-lg bg-blue-500/20 text-blue-400 text-xs flex items-center justify-center font-mono">2</span>
+                        <span>Information We Collect and How We Use It</span>
+                    </h2>
 
-        <h3>C. Camera & Mast Photos</h3>
-        <p>
-            The App includes a photo-based deflection measurement tool allowing users to mark reference points on an OHE mast photo:
-        </p>
-        <ul>
-            <li><strong>Camera Usage:</strong> The camera is used solely when you explicitly tap the "Take Photo" button within the app.</li>
-            <li><strong>Photo Storage:</strong> Photos captured or selected from your gallery are processed entirely on your device. Annotated photos are saved to your device's photo gallery <em>only</em> when you explicitly tap "Save Photo". We do not upload or store your photos on our servers.</li>
-        </ul>
+                    <h3 class="text-base font-semibold text-slate-200 mt-4 mb-2">A. Mast Deflection &amp; Sensor Processing</h3>
+                    <p class="text-slate-400 text-sm md:text-base mb-3">
+                        The App utilizes internal device sensors (Gyroscope, Accelerometer, and Gravity sensors) to determine real-time mast deflection angles:
+                    </p>
+                    <ul class="list-disc pl-6 space-y-2 text-slate-400 text-sm md:text-base">
+                        <li><strong class="text-slate-200">Sensor Readings:</strong> Calculated locally in-memory on your device in real time. Raw high-frequency sensor streams are never uploaded, logged, or transmitted externally.</li>
+                        <li><strong class="text-slate-200">Deflection Records:</strong> When you choose to save a measurement (mast location, chainage, track name, measured angle, and calculated deflection in mm), the record is saved locally on your device and, if signed in, synchronized to your organization&rsquo;s secure cloud database.</li>
+                    </ul>
 
-        <h3>D. TSS Fault Distance & Tripping Data</h3>
-        <p>
-            Fault distance calculations (relay types, impedance, resistance, fault current, and tripping time) are saved in the cloud only for authenticated team members authorized by their organization administrator. Power delegation controls ensure only authorized personnel can view or record tripping logs.
-        </p>
+                    <h3 class="text-base font-semibold text-slate-200 mt-6 mb-2">B. Camera &amp; Photogrammetry Photos</h3>
+                    <p class="text-slate-400 text-sm md:text-base mb-3">
+                        The App includes a photo-based deflection measurement tool allowing users to mark reference points on an OHE mast photo:
+                    </p>
+                    <ul class="list-disc pl-6 space-y-2 text-slate-400 text-sm md:text-base">
+                        <li>The camera is accessed solely when you explicitly tap &ldquo;Take Photo&rdquo; inside the application.</li>
+                        <li>Photos captured or selected from your gallery are processed entirely on your device. Annotated photos are saved to your device gallery only upon user action. We do not store or transmit your photos to third parties.</li>
+                    </ul>
 
-        <h3>E. Automations & Document Presets</h3>
-        <p>
-            When utilizing the Emergency Quota (EQ) requisition feature:
-        </p>
-        <ul>
-            <li>Form details (train number, journey date, passenger details) are submitted directly to the designated requisition backend without intermediary storage.</li>
-            <li>Letterhead and footer preset images are saved locally in the app's secure private sandbox directory (<code>/data/user/0/com.harsh.deflection/files/automation_presets/</code>) and encoded securely for universal synchronization within authorized organizations.</li>
-        </ul>
-    </div>
+                    <h3 class="text-base font-semibold text-slate-200 mt-6 mb-2">C. TSS Fault Distance &amp; Tripping Data</h3>
+                    <p class="text-slate-400 text-sm md:text-base">
+                        Fault distance calculations (relay types, impedance, resistance, fault current, and tripping time) are saved in the cloud only for authenticated team members authorized by their organization administrator. Power delegation controls ensure only authorized personnel can view or record tripping logs.
+                    </p>
+                </div>
 
-    <div class="card">
-        <h2>3. Device Permissions Explained</h2>
-        <p>The App requests only permissions strictly necessary for its technical features:</p>
-        <table class="permission-table">
-            <thead>
-                <tr>
-                    <th>Permission</th>
-                    <th>Purpose</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <td><code>CAMERA</code></td>
-                    <td>Required to take clear photos of OHE masts for photogrammetric deflection measurement.</td>
-                </tr>
-                <tr>
-                    <td><code>VIBRATE</code></td>
-                    <td>Provides tactile haptic feedback when a sensor reading is registered via the volume key.</td>
-                </tr>
-                <tr>
-                    <td><code>INTERNET</code></td>
-                    <td>Required for cloud synchronization of deflection & tripping records, authentication, and loading banner ads.</td>
-                </tr>
-                <tr>
-                    <td><code>POST_NOTIFICATIONS</code></td>
-                    <td>Used in Android 13+ to deliver operational notifications, tripping alerts, and workflow updates.</td>
-                </tr>
-                <tr>
-                    <td><code>AD_ID</code></td>
-                    <td>Standard Google Play Services Advertising ID permission used by Google AdMob to deliver banner ads.</td>
-                </tr>
-            </tbody>
-        </table>
-    </div>
+                <div class="border-t border-slate-800 pt-8">
+                    <h2 class="text-xl font-bold text-white mb-4 flex items-center gap-3">
+                        <span class="w-7 h-7 rounded-lg bg-blue-500/20 text-blue-400 text-xs flex items-center justify-center font-mono">3</span>
+                        <span>Device Permissions Explained</span>
+                    </h2>
+                    <div class="overflow-x-auto rounded-2xl border border-slate-800">
+                        <table class="w-full text-left text-xs md:text-sm">
+                            <thead class="bg-slate-900/90 text-slate-300 font-mono uppercase text-[11px] border-b border-slate-800">
+                                <tr>
+                                    <th class="p-3.5">Permission</th>
+                                    <th class="p-3.5">Engineering Purpose</th>
+                                </tr>
+                            </thead>
+                            <tbody class="divide-y divide-slate-800/60 bg-slate-950/60 font-normal text-slate-400">
+                                <tr>
+                                    <td class="p-3.5 font-mono text-cyan-400 font-bold">CAMERA</td>
+                                    <td class="p-3.5">Required to capture clear photos of OHE masts for photogrammetric deflection measurement.</td>
+                                </tr>
+                                <tr>
+                                    <td class="p-3.5 font-mono text-cyan-400 font-bold">VIBRATE</td>
+                                    <td class="p-3.5">Provides tactile haptic feedback when a sensor reading is registered via hardware volume keys.</td>
+                                </tr>
+                                <tr>
+                                    <td class="p-3.5 font-mono text-cyan-400 font-bold">INTERNET</td>
+                                    <td class="p-3.5">Required for cloud synchronization of deflection &amp; tripping records, authentication, and ad loading.</td>
+                                </tr>
+                                <tr>
+                                    <td class="p-3.5 font-mono text-cyan-400 font-bold">POST_NOTIFICATIONS</td>
+                                    <td class="p-3.5">Used in Android 13+ to deliver operational notifications, tripping alerts, and workflow updates.</td>
+                                </tr>
+                                <tr>
+                                    <td class="p-3.5 font-mono text-cyan-400 font-bold">AD_ID</td>
+                                    <td class="p-3.5">Standard Google Play Services Advertising ID permission used by Google AdMob to deliver banner ads.</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
 
-    <div class="card">
-        <h2>4. Third-Party Services & Libraries</h2>
-        <p>
-            We partner with trusted third-party providers who may collect non-personally identifiable diagnostic and advertising data in accordance with their respective privacy policies:
-        </p>
-        <ul class="third-party-list">
-            <li>
-                <strong>Google AdMob (Mobile Ads SDK):</strong> Displays banner advertisements within the app. AdMob may collect and process device identifiers (such as the Google Advertising ID), IP address, and interaction data to serve ads. Learn more: <a href="https://policies.google.com/technologies/ads" target="_blank" rel="noopener">Google Advertising Privacy Policy</a>.
-            </li>
-            <li>
-                <strong>Google Firebase:</strong> Used for Firebase Cloud Messaging (FCM) to deliver notifications. Learn more: <a href="https://firebase.google.com/support/privacy" target="_blank" rel="noopener">Firebase Privacy and Security</a>.
-            </li>
-            <li>
-                <strong>Supabase:</strong> Provides enterprise-grade PostgreSQL database infrastructure and JWT-based authentication for team syncing. Communication is encrypted via HTTPS/TLS. Learn more: <a href="https://supabase.com/privacy" target="_blank" rel="noopener">Supabase Privacy Policy</a>.
-            </li>
-        </ul>
-    </div>
+                <div class="border-t border-slate-800 pt-8">
+                    <h2 class="text-xl font-bold text-white mb-4 flex items-center gap-3">
+                        <span class="w-7 h-7 rounded-lg bg-blue-500/20 text-blue-400 text-xs flex items-center justify-center font-mono">4</span>
+                        <span>Third-Party Services</span>
+                    </h2>
+                    <ul class="list-disc pl-6 space-y-2 text-slate-400 text-sm md:text-base">
+                        <li><strong class="text-slate-200">Google AdMob:</strong> Serves banner advertisements in accordance with Google&rsquo;s privacy terms.</li>
+                        <li><strong class="text-slate-200">Firebase Cloud Messaging (FCM):</strong> Delivers instant operational notifications and system alerts.</li>
+                        <li><strong class="text-slate-200">Supabase:</strong> Provides enterprise-grade PostgreSQL cloud database and TLS 1.3 encrypted authentication.</li>
+                    </ul>
+                </div>
 
-    <div class="card">
-        <h2>5. Data Storage, Retention & Security</h2>
-        <p>
-            We implement industry-standard technical measures to safeguard your data:
-        </p>
-        <ul>
-            <li><strong>Encrypted Transmission:</strong> All data in transit between the App and backend servers is encrypted using Transport Layer Security (TLS 1.2/1.3).</li>
-            <li><strong>Sandbox Storage:</strong> Photos, presets, and cached files are stored in the App's private internal sandbox, inaccessible to other third-party applications.</li>
-            <li><strong>Access Controls:</strong> Organization data is restricted by role-based power delegation set by organizational administrators.</li>
-            <li><strong>Data Retention:</strong> We retain your cloud account and field records only for as long as your account is active or as needed to provide you with the App's services.</li>
-        </ul>
-    </div>
+                <div class="border-t border-slate-800 pt-8 flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4 bg-slate-900/60 p-6 rounded-2xl">
+                    <div>
+                        <div class="text-xs font-mono text-slate-500">DEFLECTION &amp; OHE PRIVACY INQUIRIES</div>
+                        <div class="text-lg font-bold text-white">hgodse912@gmail.com / support@agasty.cloud</div>
+                    </div>
+                    <a href="mailto:hgodse912@gmail.com" class="px-5 py-2.5 bg-blue-600 hover:bg-blue-500 text-white rounded-xl text-sm font-semibold transition">
+                        Submit Data Request
+                    </a>
+                </div>
 
-    <div class="card">
-        <h2>6. Your Rights & Data Deletion</h2>
-        <div class="highlight-box">
-            <strong>Right to Deletion:</strong> You have the right to request the complete deletion of your account and any associated records at any time.
+            </div>
         </div>
-        <p>
-            If you wish to delete your account, remove your organization records, or have any questions about data held by OHE Records, you may contact us directly at <a href="mailto:hgodse912@gmail.com"><strong>hgodse912@gmail.com</strong></a> with the subject line <em>"Data Deletion Request"</em>. Requests are processed within 30 days.
-        </p>
-    </div>
+    </main>
 
-    <div class="card">
-        <h2>7. Children's Privacy</h2>
-        <p>
-            OHE Records is an engineering utility designed for professional and educational use. It is not directed to individuals under the age of 13 (or the minimum legal age in your jurisdiction). We do not knowingly collect personal information from children under 13.
-        </p>
-    </div>
-
-    <div class="card">
-        <h2>8. Changes to This Privacy Policy</h2>
-        <p>
-            We may update our Privacy Policy periodically to reflect changes in app functionality or legal requirements. When updates are published, the revised date at the top will be updated. We encourage you to review this page periodically.
-        </p>
-    </div>
-
-    <div class="card">
-        <h2>9. Contact Information</h2>
-        <p>
-            If you have any questions, feedback, or concerns regarding this Privacy Policy or our data handling practices, please contact:
-        </p>
-        <p style="margin-left: 12px;">
-            <strong>Developer:</strong> Harsh<br>
-            <strong>Application:</strong> OHE Records (com.harsh.deflection)<br>
-            <strong>Email:</strong> <a href="mailto:hgodse912@gmail.com">hgodse912@gmail.com</a>
-        </p>
-    </div>
-
-    <footer>
-        <p>&copy; 2026 OHE Records. All rights reserved.</p>
+    <footer class="py-8 border-t border-white/[0.08] px-6 text-center text-xs text-slate-500 font-mono">
+        &copy; 2026 Agasty Enterprises &bull; OHE Records &bull; <a href="index.html" class="hover:text-white underline">Home</a> &bull; <a href="privacy.html" class="hover:text-white underline">Privacy</a> &bull; <a href="terms.html" class="hover:text-white underline">Terms</a>
     </footer>
-</div>
 
 </body>
 </html>
