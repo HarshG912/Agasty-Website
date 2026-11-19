@@ -34,13 +34,16 @@ body {
 ::-webkit-scrollbar {
     width: 8px;
 }
+
 ::-webkit-scrollbar-track {
     background: #030712;
 }
+
 ::-webkit-scrollbar-thumb {
     background: #1e293b;
     border-radius: 4px;
 }
+
 ::-webkit-scrollbar-thumb:hover {
     background: #3b82f6;
 }
@@ -96,6 +99,7 @@ body {
 .animated-border {
     position: relative;
 }
+
 .animated-border::before {
     content: '';
     position: absolute;
@@ -112,15 +116,30 @@ body {
 }
 
 @keyframes borderRotate {
-    0% { background-position: 0% 50%; }
-    50% { background-position: 100% 50%; }
-    100% { background-position: 0% 50%; }
+    0% {
+        background-position: 0% 50%;
+    }
+
+    50% {
+        background-position: 100% 50%;
+    }
+
+    100% {
+        background-position: 0% 50%;
+    }
 }
 
 /* Floating animation */
 @keyframes floatSlow {
-    0%, 100% { transform: translateY(0px) rotate(0deg); }
-    50% { transform: translateY(-12px) rotate(1deg); }
+
+    0%,
+    100% {
+        transform: translateY(0px) rotate(0deg);
+    }
+
+    50% {
+        transform: translateY(-12px) rotate(1deg);
+    }
 }
 
 .animate-float {
@@ -128,8 +147,17 @@ body {
 }
 
 @keyframes pulseGlow {
-    0%, 100% { opacity: 0.4; transform: scale(1); }
-    50% { opacity: 0.8; transform: scale(1.05); }
+
+    0%,
+    100% {
+        opacity: 0.4;
+        transform: scale(1);
+    }
+
+    50% {
+        opacity: 0.8;
+        transform: scale(1.05);
+    }
 }
 
 .animate-pulse-glow {
@@ -138,8 +166,13 @@ body {
 
 /* Infinite Marquee */
 @keyframes marquee {
-    0% { transform: translateX(0%); }
-    100% { transform: translateX(-50%); }
+    0% {
+        transform: translateX(0%);
+    }
+
+    100% {
+        transform: translateX(-50%);
+    }
 }
 
 .marquee-content {
@@ -177,12 +210,6 @@ body {
     opacity: 1;
 }
 
-/* Video Frame Polish */
-.motion-player-frame {
-    box-shadow: 0 25px 60px -15px rgba(0, 0, 0, 0.9), 0 0 40px rgba(59, 130, 246, 0.15);
-    border: 1px solid rgba(255, 255, 255, 0.12);
-}
-
 /* Beam Simulation Canvas */
 #beamCanvas {
     background: #090d16;
@@ -196,15 +223,15 @@ section[id] {
 }
 
 /* Modal Reliability & Superior Stacking */
-#formModal, #motionModal {
+#formModal {
     z-index: 99999 !important;
 }
 
-#formModal.flex, #motionModal.flex {
+#formModal.flex {
     display: flex !important;
 }
 
-#formModal.hidden, #motionModal.hidden {
+#formModal.hidden {
     display: none !important;
 }
 

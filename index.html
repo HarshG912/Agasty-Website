@@ -1,16 +1,19 @@
 <!DOCTYPE html>
 <html lang="en" class="scroll-smooth">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Agasty Enterprises | Advanced AI Systems, Mobile Sensing & Kinetic Software</title>
-    <meta name="description" content="Agasty Enterprises architects intelligent applications, precision sensor platforms, and autonomous AI systems that solve complex challenges through elegant code.">
+    <title>Agasty Enterprises | Advanced AI Systems, Mobile Sensing & Autonomous Engineering</title>
+    <meta name="description"
+        content="Agasty Enterprises architects intelligent applications, precision sensor platforms, and autonomous AI systems that solve complex challenges through elegant code.">
     <meta name="theme-color" content="#030712">
 
     <!-- Open Graph / Meta -->
     <meta property="og:type" content="website">
     <meta property="og:title" content="Agasty Enterprises | Advanced App Dev & AI Solutions">
-    <meta property="og:description" content="Engineering high-precision sensor systems, cloud architectures, and autonomous AI software for the intelligent era.">
+    <meta property="og:description"
+        content="Engineering high-precision sensor systems, cloud architectures, and autonomous AI software for the intelligent era.">
     <meta property="og:image" content="assets/images/poster-3d-scroll.webp">
 
     <!-- Tailwind CSS CDN -->
@@ -86,21 +89,26 @@
         window.closeConsultationModal = closeConsultationModal;
     </script>
 </head>
+
 <body class="bg-slate-950 text-slate-100 relative min-h-screen selection:bg-blue-600 selection:text-white">
 
     <!-- Interactive Particle Background Canvas -->
     <canvas id="bgCanvas" class="fixed inset-0 pointer-events-none z-0 opacity-60"></canvas>
 
     <!-- Ambient Glow Orbs -->
-    <div class="fixed top-1/4 left-1/4 -translate-x-1/2 -translate-y-1/2 w-96 h-96 bg-blue-600/10 rounded-full blur-[140px] pointer-events-none z-0 animate-pulse-glow"></div>
-    <div class="fixed bottom-1/3 right-1/4 w-96 h-96 bg-purple-600/10 rounded-full blur-[140px] pointer-events-none z-0 animate-pulse-glow" style="animation-delay: 2s;"></div>
+    <div
+        class="fixed top-1/4 left-1/4 -translate-x-1/2 -translate-y-1/2 w-96 h-96 bg-blue-600/10 rounded-full blur-[140px] pointer-events-none z-0 animate-pulse-glow">
+    </div>
+    <div class="fixed bottom-1/3 right-1/4 w-96 h-96 bg-purple-600/10 rounded-full blur-[140px] pointer-events-none z-0 animate-pulse-glow"
+        style="animation-delay: 2s;"></div>
 
     <!-- Navigation Bar -->
     <header class="fixed top-0 left-0 w-full z-50 glass border-b border-white/[0.07] transition-all duration-300">
         <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
             <!-- Brand Logo -->
             <a href="#home" class="flex items-center gap-3 group">
-                <div class="w-10 h-10 rounded-xl bg-gradient-to-tr from-blue-600 via-indigo-600 to-purple-600 flex items-center justify-center shadow-lg shadow-blue-500/25 group-hover:scale-105 transition-transform duration-300">
+                <div
+                    class="w-10 h-10 rounded-xl bg-gradient-to-tr from-blue-600 via-indigo-600 to-purple-600 flex items-center justify-center shadow-lg shadow-blue-500/25 group-hover:scale-105 transition-transform duration-300">
                     <i class="fas fa-cube text-white text-lg"></i>
                 </div>
                 <div class="text-xl font-extrabold tracking-tight">
@@ -114,7 +122,8 @@
                 <a href="#portfolio" class="hover:text-blue-400 transition-colors">Portfolio</a>
                 <a href="#simulator" class="hover:text-blue-400 transition-colors flex items-center gap-1.5">
                     <span>Live Simulator</span>
-                    <span class="px-1.5 py-0.5 text-[10px] bg-blue-500/20 text-blue-400 border border-blue-500/30 rounded font-mono">NEW</span>
+                    <span
+                        class="px-1.5 py-0.5 text-[10px] bg-blue-500/20 text-blue-400 border border-blue-500/30 rounded font-mono">NEW</span>
                 </a>
                 <a href="#estimator" class="hover:text-blue-400 transition-colors">Estimator</a>
                 <a href="#contact" class="hover:text-blue-400 transition-colors">Contact</a>
@@ -122,7 +131,8 @@
 
             <!-- Actions / Status -->
             <div class="hidden sm:flex items-center space-x-4">
-                <div class="flex items-center gap-2 text-xs font-mono text-emerald-400 bg-emerald-950/40 border border-emerald-500/20 px-3 py-1.5 rounded-full">
+                <div
+                    class="flex items-center gap-2 text-xs font-mono text-emerald-400 bg-emerald-950/40 border border-emerald-500/20 px-3 py-1.5 rounded-full">
                     <span class="w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></span>
                     <span>SYSTEMS NOMINAL</span>
                 </div>
@@ -135,25 +145,29 @@
             </div>
 
             <!-- Mobile Hamburger Button -->
-            <button id="mobileMenuBtn" aria-label="Toggle Navigation" class="lg:hidden p-2 rounded-lg bg-slate-900 border border-slate-800 text-slate-300 hover:text-white">
+            <button id="mobileMenuBtn" aria-label="Toggle Navigation"
+                class="lg:hidden p-2 rounded-lg bg-slate-900 border border-slate-800 text-slate-300 hover:text-white">
                 <i class="fas fa-bars text-xl"></i>
             </button>
         </div>
     </header>
 
     <!-- Mobile Navigation Drawer -->
-    <div id="mobileNavDrawer" class="fixed inset-0 z-50 glass translate-x-full transition-transform duration-300 lg:hidden flex flex-col justify-between p-8">
+    <div id="mobileNavDrawer"
+        class="fixed inset-0 z-50 glass translate-x-full transition-transform duration-300 lg:hidden flex flex-col justify-between p-8">
         <div>
             <div class="flex justify-between items-center mb-10">
                 <div class="text-xl font-extrabold tracking-tight">AGASTY<span class="text-blue-500">.CLOUD</span></div>
-                <button id="mobileCloseBtn" aria-label="Close Navigation" class="p-2 rounded-lg bg-slate-800 text-slate-300">
+                <button id="mobileCloseBtn" aria-label="Close Navigation"
+                    class="p-2 rounded-lg bg-slate-800 text-slate-300">
                     <i class="fas fa-times text-xl"></i>
                 </button>
             </div>
             <nav class="flex flex-col space-y-6 text-lg font-semibold text-slate-200">
                 <a href="#capabilities" class="mobile-nav-link hover:text-blue-400 transition-colors">Capabilities</a>
                 <a href="#portfolio" class="mobile-nav-link hover:text-blue-400 transition-colors">Portfolio</a>
-                <a href="#simulator" class="mobile-nav-link hover:text-blue-400 transition-colors">Deflection Simulator</a>
+                <a href="#simulator" class="mobile-nav-link hover:text-blue-400 transition-colors">Deflection
+                    Simulator</a>
                 <a href="#estimator" class="mobile-nav-link hover:text-blue-400 transition-colors">Project Estimator</a>
                 <a href="#contact" class="mobile-nav-link hover:text-blue-400 transition-colors">Contact & Inquiries</a>
             </nav>
@@ -177,13 +191,15 @@
             <div class="max-w-6xl mx-auto">
                 <!-- Top Announcement Badge -->
                 <div class="flex justify-center mb-8">
-                    <div class="inline-flex items-center gap-3 px-4 py-2 rounded-full border border-blue-500/30 bg-blue-950/40 backdrop-blur-md shadow-lg shadow-blue-500/10 hover:border-blue-500/60 transition-colors">
+                    <div
+                        class="inline-flex items-center gap-3 px-4 py-2 rounded-full border border-blue-500/30 bg-blue-950/40 backdrop-blur-md shadow-lg shadow-blue-500/10 hover:border-blue-500/60 transition-colors">
                         <span class="flex h-2 w-2 relative">
-                            <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-blue-400 opacity-75"></span>
+                            <span
+                                class="animate-ping absolute inline-flex h-full w-full rounded-full bg-blue-400 opacity-75"></span>
                             <span class="relative inline-flex rounded-full h-2 w-2 bg-blue-500"></span>
                         </span>
                         <span class="text-xs md:text-sm font-medium text-slate-300">
-                            Agasty 2.0 • Advanced AI Workflows, Mobile Sensing & Generative Motion
+                            Agasty 2.0 • Advanced AI Workflows, Mobile Sensing & Autonomous Engineering
                         </span>
                     </div>
                 </div>
@@ -195,7 +211,8 @@
                         <span class="gradient-text">Shape Reality</span>
                     </h1>
                     <p class="text-slate-400 text-lg md:text-2xl leading-relaxed mb-10 max-w-3xl mx-auto font-normal">
-                        Agasty Enterprises builds intelligent mobile applications, precision sensor platforms, and autonomous AI systems that transform complex industrial operations into seamless reality.
+                        Agasty Enterprises builds intelligent mobile applications, precision sensor platforms, and
+                        autonomous AI systems that transform complex industrial operations into seamless reality.
                     </p>
 
                     <!-- CTA Buttons -->
@@ -204,88 +221,15 @@
                             <span>Start a Project</span>
                             <i class="fas fa-arrow-right"></i>
                         </button>
-                        <a href="#simulator" class="w-full sm:w-auto px-8 py-4 border border-slate-700/80 rounded-2xl font-bold text-base hover:bg-slate-900/80 hover:border-slate-500 transition-all duration-300 flex items-center justify-center gap-2">
+                        <a href="#simulator"
+                            class="w-full sm:w-auto px-8 py-4 border border-slate-700/80 rounded-2xl font-bold text-base hover:bg-slate-900/80 hover:border-slate-500 transition-all duration-300 flex items-center justify-center gap-2">
                             <i class="fas fa-play text-blue-400 text-xs"></i>
                             <span>Test Live Simulator</span>
                         </a>
-                        <a href="#portfolio" class="w-full sm:w-auto px-6 py-4 text-slate-400 hover:text-white transition-colors font-medium text-base">
+                        <a href="#portfolio"
+                            class="w-full sm:w-auto px-6 py-4 text-slate-400 hover:text-white transition-colors font-medium text-base">
                             Explore Builds ↓
                         </a>
-                    </div>
-                </div>
-
-                <!-- Interactive Hero Motion Visuals Reel -->
-                <div class="relative max-w-5xl mx-auto mt-6">
-                    <!-- Glowing Backlight -->
-                    <div class="absolute -inset-1.5 bg-gradient-to-r from-blue-600 via-indigo-600 to-purple-600 rounded-3xl blur-2xl opacity-30 animate-pulse-glow"></div>
-
-                    <!-- Video Container Frame -->
-                    <div class="relative bg-slate-900/90 rounded-2xl md:rounded-3xl border border-white/10 motion-player-frame overflow-hidden backdrop-blur-xl">
-                        
-                        <!-- Window Titlebar -->
-                        <div class="px-6 py-3.5 bg-slate-950/80 border-b border-white/[0.08] flex items-center justify-between">
-                            <div class="flex items-center gap-2">
-                                <span class="w-3 h-3 rounded-full bg-red-500/80"></span>
-                                <span class="w-3 h-3 rounded-full bg-yellow-500/80"></span>
-                                <span class="w-3 h-3 rounded-full bg-green-500/80"></span>
-                            </div>
-                            <div class="flex items-center gap-3 text-xs text-slate-400 font-mono">
-                                <span class="hidden md:inline px-2 py-0.5 rounded bg-blue-950/60 border border-blue-500/30 text-blue-300">Spatial UI &middot; Kinetic Flow</span>
-                                <button id="openMotionModal" title="Fullscreen View" class="hover:text-white transition">
-                                    <i class="fas fa-expand"></i>
-                                </button>
-                            </div>
-                        </div>
-
-                        <!-- Motion Video Playback Canvas -->
-                        <div class="relative aspect-video w-full bg-black overflow-hidden flex items-center justify-center">
-                            <video id="heroMotionVideo" autoplay muted loop playsinline preload="auto" poster="assets/images/poster-3d-scroll.webp" class="w-full h-full object-cover transition-opacity duration-300">
-                                <source src="assets/videos/motion-3d-scroll.mp4" type="video/mp4">
-                                Your browser does not support HTML5 video.
-                            </video>
-
-                            <!-- Video Overlay Gradient -->
-                            <div class="absolute inset-0 bg-gradient-to-t from-slate-950 via-transparent to-transparent pointer-events-none opacity-80"></div>
-
-                            <!-- Floating Video Meta Badge -->
-                            <div class="absolute bottom-6 left-6 right-6 flex flex-col md:flex-row md:items-end justify-between gap-4 pointer-events-none">
-                                <div class="max-w-xl">
-                                    <div id="motionTag" class="text-xs font-mono font-bold text-blue-400 tracking-wider uppercase mb-1">
-                                        Spatial UI &bull; Kinetic Physics
-                                    </div>
-                                    <h3 id="motionTitle" class="text-xl md:text-2xl font-extrabold text-white mb-1 drop-shadow">
-                                        3D Spatial Scroll & Morph
-                                    </h3>
-                                    <p id="motionDesc" class="text-xs md:text-sm text-slate-300 drop-shadow line-clamp-2">
-                                        Interactive 3D viewport scrolling with continuous particle morphing, modeled after generative spatial interfaces.
-                                    </p>
-                                </div>
-                                <div class="flex items-center gap-3 pointer-events-auto">
-                                    <button id="motionPlayPause" aria-label="Play/Pause" class="w-10 h-10 rounded-xl bg-slate-900/80 border border-white/20 text-white flex items-center justify-center hover:bg-blue-600 transition">
-                                        <i class="fas fa-pause text-sm"></i>
-                                    </button>
-                                    <button id="motionMute" aria-label="Toggle Sound" class="w-10 h-10 rounded-xl bg-slate-900/80 border border-white/20 text-white flex items-center justify-center hover:bg-blue-600 transition">
-                                        <i class="fas fa-volume-mute text-sm"></i>
-                                    </button>
-                                </div>
-                            </div>
-
-                            <!-- Video Playback Progress Bar -->
-                            <div class="absolute bottom-0 left-0 w-full h-1 bg-white/10">
-                                <div id="motionProgressBar" class="h-full bg-gradient-to-r from-blue-500 to-purple-500 w-0 transition-all duration-100"></div>
-                            </div>
-                        </div>
-
-                        <!-- Motion Graphics Switcher Tabs -->
-                        <div class="p-4 bg-slate-950/90 border-t border-white/[0.08] overflow-x-auto">
-                            <div class="text-[11px] font-mono text-slate-500 uppercase tracking-wider mb-2 flex items-center justify-between">
-                                <span>Motion Visuals Suite</span>
-                                <span>Select clip to view</span>
-                            </div>
-                            <div id="motionTabs" class="flex items-center gap-2 min-w-max">
-                                <!-- Populated dynamically by main.js -->
-                            </div>
-                        </div>
                     </div>
                 </div>
 
@@ -297,19 +241,23 @@
             <div class="max-w-7xl mx-auto px-6">
                 <div class="grid grid-cols-2 md:grid-cols-4 gap-8">
                     <div class="p-6 rounded-2xl bg-slate-900/40 border border-white/[0.05] text-center">
-                        <div class="text-3xl md:text-5xl font-black text-white mb-2 counter-val" data-target="99.99" data-suffix="%" data-decimals="2">99.99%</div>
+                        <div class="text-3xl md:text-5xl font-black text-white mb-2 counter-val" data-target="99.99"
+                            data-suffix="%" data-decimals="2">99.99%</div>
                         <div class="text-xs md:text-sm font-medium text-slate-400">High-Availability SLA</div>
                     </div>
                     <div class="p-6 rounded-2xl bg-slate-900/40 border border-white/[0.05] text-center">
-                        <div class="text-3xl md:text-5xl font-black text-blue-400 mb-2 counter-val" data-target="10" data-suffix="ms" data-decimals="0">&lt;10ms</div>
+                        <div class="text-3xl md:text-5xl font-black text-blue-400 mb-2 counter-val" data-target="10"
+                            data-suffix="ms" data-decimals="0">&lt;10ms</div>
                         <div class="text-xs md:text-sm font-medium text-slate-400">Hardware Sensor Telemetry</div>
                     </div>
                     <div class="p-6 rounded-2xl bg-slate-900/40 border border-white/[0.05] text-center">
-                        <div class="text-3xl md:text-5xl font-black text-purple-400 mb-2 counter-val" data-target="100" data-suffix="%" data-decimals="0">100%</div>
+                        <div class="text-3xl md:text-5xl font-black text-purple-400 mb-2 counter-val" data-target="100"
+                            data-suffix="%" data-decimals="0">100%</div>
                         <div class="text-xs md:text-sm font-medium text-slate-400">Native Hardware Sensor Fusion</div>
                     </div>
                     <div class="p-6 rounded-2xl bg-slate-900/40 border border-white/[0.05] text-center">
-                        <div class="text-3xl md:text-5xl font-black text-emerald-400 mb-2 counter-val" data-target="24" data-suffix="/7" data-decimals="0">24/7</div>
+                        <div class="text-3xl md:text-5xl font-black text-emerald-400 mb-2 counter-val" data-target="24"
+                            data-suffix="/7" data-decimals="0">24/7</div>
                         <div class="text-xs md:text-sm font-medium text-slate-400">Autonomous Workflow Engine</div>
                     </div>
                 </div>
@@ -321,36 +269,50 @@
             <div class="marquee-content flex gap-8 items-center text-sm font-mono text-slate-400">
                 <span class="flex items-center gap-2"><i class="fab fa-python text-blue-400"></i> Python 3.12</span>
                 <span class="text-slate-600">&bull;</span>
-                <span class="flex items-center gap-2"><i class="fab fa-js text-yellow-400"></i> TypeScript / Next.js</span>
+                <span class="flex items-center gap-2"><i class="fab fa-js text-yellow-400"></i> TypeScript /
+                    Next.js</span>
                 <span class="text-slate-600">&bull;</span>
-                <span class="flex items-center gap-2"><i class="fas fa-brain text-purple-400"></i> LLM & Autonomous Agent Mesh</span>
+                <span class="flex items-center gap-2"><i class="fas fa-brain text-purple-400"></i> LLM & Autonomous
+                    Agent Mesh</span>
                 <span class="text-slate-600">&bull;</span>
-                <span class="flex items-center gap-2"><i class="fas fa-microchip text-emerald-400"></i> Inertial Gyroscope / DSP</span>
+                <span class="flex items-center gap-2"><i class="fas fa-microchip text-emerald-400"></i> Inertial
+                    Gyroscope / DSP</span>
                 <span class="text-slate-600">&bull;</span>
-                <span class="flex items-center gap-2"><i class="fab fa-docker text-blue-500"></i> Docker & Cloud Edge</span>
+                <span class="flex items-center gap-2"><i class="fab fa-docker text-blue-500"></i> Docker & Cloud
+                    Edge</span>
                 <span class="text-slate-600">&bull;</span>
-                <span class="flex items-center gap-2"><i class="fas fa-bolt text-amber-400"></i> n8n Automation Workflows</span>
+                <span class="flex items-center gap-2"><i class="fas fa-bolt text-amber-400"></i> n8n Automation
+                    Workflows</span>
                 <span class="text-slate-600">&bull;</span>
-                <span class="flex items-center gap-2"><i class="fas fa-shield-halved text-cyan-400"></i> Industrial Safety Compliance</span>
+                <span class="flex items-center gap-2"><i class="fas fa-shield-halved text-cyan-400"></i> Industrial
+                    Safety Compliance</span>
                 <span class="text-slate-600">&bull;</span>
-                <span class="flex items-center gap-2"><i class="fas fa-qrcode text-pink-400"></i> Contactless QR Ecosystem</span>
+                <span class="flex items-center gap-2"><i class="fas fa-qrcode text-pink-400"></i> Contactless QR
+                    Ecosystem</span>
                 <span class="text-slate-600">&bull;</span>
                 <!-- Duplicate for seamless infinite loop -->
                 <span class="flex items-center gap-2"><i class="fab fa-python text-blue-400"></i> Python 3.12</span>
                 <span class="text-slate-600">&bull;</span>
-                <span class="flex items-center gap-2"><i class="fab fa-js text-yellow-400"></i> TypeScript / Next.js</span>
+                <span class="flex items-center gap-2"><i class="fab fa-js text-yellow-400"></i> TypeScript /
+                    Next.js</span>
                 <span class="text-slate-600">&bull;</span>
-                <span class="flex items-center gap-2"><i class="fas fa-brain text-purple-400"></i> LLM & Autonomous Agent Mesh</span>
+                <span class="flex items-center gap-2"><i class="fas fa-brain text-purple-400"></i> LLM & Autonomous
+                    Agent Mesh</span>
                 <span class="text-slate-600">&bull;</span>
-                <span class="flex items-center gap-2"><i class="fas fa-microchip text-emerald-400"></i> Inertial Gyroscope / DSP</span>
+                <span class="flex items-center gap-2"><i class="fas fa-microchip text-emerald-400"></i> Inertial
+                    Gyroscope / DSP</span>
                 <span class="text-slate-600">&bull;</span>
-                <span class="flex items-center gap-2"><i class="fab fa-docker text-blue-500"></i> Docker & Cloud Edge</span>
+                <span class="flex items-center gap-2"><i class="fab fa-docker text-blue-500"></i> Docker & Cloud
+                    Edge</span>
                 <span class="text-slate-600">&bull;</span>
-                <span class="flex items-center gap-2"><i class="fas fa-bolt text-amber-400"></i> n8n Automation Workflows</span>
+                <span class="flex items-center gap-2"><i class="fas fa-bolt text-amber-400"></i> n8n Automation
+                    Workflows</span>
                 <span class="text-slate-600">&bull;</span>
-                <span class="flex items-center gap-2"><i class="fas fa-shield-halved text-cyan-400"></i> Industrial Safety Compliance</span>
+                <span class="flex items-center gap-2"><i class="fas fa-shield-halved text-cyan-400"></i> Industrial
+                    Safety Compliance</span>
                 <span class="text-slate-600">&bull;</span>
-                <span class="flex items-center gap-2"><i class="fas fa-qrcode text-pink-400"></i> Contactless QR Ecosystem</span>
+                <span class="flex items-center gap-2"><i class="fas fa-qrcode text-pink-400"></i> Contactless QR
+                    Ecosystem</span>
             </div>
         </div>
 
@@ -359,14 +321,17 @@
             <div class="max-w-7xl mx-auto">
                 <div class="flex flex-col md:flex-row md:items-end justify-between mb-12 gap-6">
                     <div>
-                        <div class="inline-flex items-center gap-2 px-3 py-1 rounded-md bg-blue-500/10 border border-blue-500/20 text-blue-400 text-xs font-mono font-semibold uppercase mb-3">
+                        <div
+                            class="inline-flex items-center gap-2 px-3 py-1 rounded-md bg-blue-500/10 border border-blue-500/20 text-blue-400 text-xs font-mono font-semibold uppercase mb-3">
                             <i class="fas fa-flask"></i> Interactive Physics Simulator
                         </div>
                         <h2 class="text-3xl md:text-5xl font-black tracking-tight">
                             Experience <span class="gradient-text">Deflection</span> Live
                         </h2>
                         <p class="text-slate-400 mt-3 text-base md:text-lg max-w-2xl">
-                            Our proprietary structural deflection application harnesses raw smartphone gyroscopic and accelerometer sensors to compute millimetric structural deflection in real time. Test the physics engine below:
+                            Our proprietary structural deflection application harnesses raw smartphone gyroscopic and
+                            accelerometer sensors to compute millimetric structural deflection in real time. Test the
+                            physics engine below:
                         </p>
                     </div>
                     <div class="flex items-center gap-3">
@@ -376,7 +341,7 @@
 
                 <!-- Simulator Container -->
                 <div class="grid lg:grid-cols-3 gap-8 p-6 md:p-8 rounded-3xl glass-card border border-white/10">
-                    
+
                     <!-- Left: Interactive Canvas -->
                     <div class="lg:col-span-2 flex flex-col justify-between">
                         <div class="relative">
@@ -397,62 +362,76 @@
                                     <span class="text-slate-400">APPLIED LOAD (P)</span>
                                     <span id="loadDisplay" class="text-blue-400 font-bold">15 kN</span>
                                 </div>
-                                <input id="loadSlider" type="range" min="1" max="40" value="15" step="1" class="w-full accent-blue-500 cursor-pointer">
+                                <input id="loadSlider" type="range" min="1" max="40" value="15" step="1"
+                                    class="w-full accent-blue-500 cursor-pointer">
                             </div>
                             <div>
                                 <div class="flex justify-between text-xs font-mono mb-2">
                                     <span class="text-slate-400">SPAN LENGTH (L)</span>
                                     <span id="spanDisplay" class="text-purple-400 font-bold">12 m</span>
                                 </div>
-                                <input id="spanSlider" type="range" min="4" max="25" value="12" step="1" class="w-full accent-purple-500 cursor-pointer">
+                                <input id="spanSlider" type="range" min="4" max="25" value="12" step="1"
+                                    class="w-full accent-purple-500 cursor-pointer">
                             </div>
                         </div>
                     </div>
 
                     <!-- Right: Live Sensor Telemetry Dashboard -->
-                    <div class="bg-slate-950/80 p-6 rounded-2xl border border-white/[0.08] flex flex-col justify-between">
+                    <div
+                        class="bg-slate-950/80 p-6 rounded-2xl border border-white/[0.08] flex flex-col justify-between">
                         <div>
                             <div class="flex items-center justify-between pb-4 border-b border-slate-800 mb-6">
-                                <h4 class="font-bold text-sm tracking-wide uppercase text-slate-300">Sensor Telemetry</h4>
-                                <span class="text-[10px] font-mono px-2 py-0.5 rounded bg-emerald-500/20 text-emerald-400 border border-emerald-500/30">CALIBRATED</span>
+                                <h4 class="font-bold text-sm tracking-wide uppercase text-slate-300">Sensor Telemetry
+                                </h4>
+                                <span
+                                    class="text-[10px] font-mono px-2 py-0.5 rounded bg-emerald-500/20 text-emerald-400 border border-emerald-500/30">CALIBRATED</span>
                             </div>
 
                             <div class="space-y-4">
-                                <div class="p-3.5 rounded-xl bg-slate-900/60 border border-slate-800 flex justify-between items-center">
+                                <div
+                                    class="p-3.5 rounded-xl bg-slate-900/60 border border-slate-800 flex justify-between items-center">
                                     <div>
                                         <div class="text-[11px] font-mono text-slate-400">MAX DEFLECTION (Y_MAX)</div>
-                                        <div id="liveDeflectionValue" class="text-2xl font-black text-cyan-400">0.00 mm</div>
+                                        <div id="liveDeflectionValue" class="text-2xl font-black text-cyan-400">0.00 mm
+                                        </div>
                                     </div>
                                     <i class="fas fa-arrows-alt-v text-cyan-500/40 text-xl"></i>
                                 </div>
 
-                                <div class="p-3.5 rounded-xl bg-slate-900/60 border border-slate-800 flex justify-between items-center">
+                                <div
+                                    class="p-3.5 rounded-xl bg-slate-900/60 border border-slate-800 flex justify-between items-center">
                                     <div>
                                         <div class="text-[11px] font-mono text-slate-400">NATURAL FREQUENCY (F_N)</div>
-                                        <div id="liveFrequencyValue" class="text-2xl font-black text-purple-400">8.2 Hz</div>
+                                        <div id="liveFrequencyValue" class="text-2xl font-black text-purple-400">8.2 Hz
+                                        </div>
                                     </div>
                                     <i class="fas fa-wave-square text-purple-500/40 text-xl"></i>
                                 </div>
 
-                                <div class="p-3.5 rounded-xl bg-slate-900/60 border border-slate-800 flex justify-between items-center">
+                                <div
+                                    class="p-3.5 rounded-xl bg-slate-900/60 border border-slate-800 flex justify-between items-center">
                                     <div>
                                         <div class="text-[11px] font-mono text-slate-400">GYROSCOPE ANGULAR RATE</div>
-                                        <div id="liveGyroValue" class="text-2xl font-black text-emerald-400">&plusmn;0.012&deg;/s</div>
+                                        <div id="liveGyroValue" class="text-2xl font-black text-emerald-400">
+                                            &plusmn;0.012&deg;/s</div>
                                     </div>
                                     <i class="fas fa-compass text-emerald-500/40 text-xl"></i>
                                 </div>
 
-                                <div class="p-3.5 rounded-xl bg-slate-900/60 border border-slate-800 flex justify-between items-center">
+                                <div
+                                    class="p-3.5 rounded-xl bg-slate-900/60 border border-slate-800 flex justify-between items-center">
                                     <div>
                                         <div class="text-[11px] font-mono text-slate-400">BENDING STRESS (&sigma;)</div>
-                                        <div id="liveStressValue" class="text-2xl font-black text-pink-400">50.4 MPa</div>
+                                        <div id="liveStressValue" class="text-2xl font-black text-pink-400">50.4 MPa
+                                        </div>
                                     </div>
                                     <i class="fas fa-gauge-high text-pink-500/40 text-xl"></i>
                                 </div>
                             </div>
                         </div>
 
-                        <div class="mt-6 pt-4 border-t border-slate-800 text-xs text-slate-400 flex items-center justify-between">
+                        <div
+                            class="mt-6 pt-4 border-t border-slate-800 text-xs text-slate-400 flex items-center justify-between">
                             <span>Hardware: CoreMotion / Android Sensor HAL</span>
                             <a href="#portfolio" class="text-blue-400 hover:underline">Learn more &rarr;</a>
                         </div>
@@ -466,125 +445,159 @@
         <section id="capabilities" class="py-24 px-6 border-t border-white/[0.06] relative">
             <div class="max-w-7xl mx-auto">
                 <div class="text-center max-w-3xl mx-auto mb-16">
-                    <div class="inline-flex items-center gap-2 px-3 py-1 rounded-md bg-purple-500/10 border border-purple-500/20 text-purple-400 text-xs font-mono font-semibold uppercase mb-3">
+                    <div
+                        class="inline-flex items-center gap-2 px-3 py-1 rounded-md bg-purple-500/10 border border-purple-500/20 text-purple-400 text-xs font-mono font-semibold uppercase mb-3">
                         <i class="fas fa-layer-group"></i> Specialized Capabilities
                     </div>
                     <h2 class="text-4xl md:text-5xl font-black tracking-tight mb-4">
                         Comprehensive <span class="gradient-text">Engineering</span>
                     </h2>
                     <p class="text-slate-400 text-base md:text-lg">
-                        From low-level hardware sensor DSP to distributed cloud microservices and autonomous LLM agents, we deliver end-to-end resilient systems.
+                        From low-level hardware sensor DSP to distributed cloud microservices and autonomous LLM agents,
+                        we deliver end-to-end resilient systems.
                     </p>
                 </div>
 
                 <!-- 6 Spotlight Cards -->
                 <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-                    
+
                     <!-- Capability 1 -->
                     <div class="p-8 rounded-3xl glass-card spotlight-card flex flex-col justify-between group">
                         <div>
-                            <div class="w-14 h-14 rounded-2xl bg-blue-500/10 border border-blue-500/20 flex items-center justify-center mb-6 group-hover:bg-blue-500 group-hover:text-white transition-all duration-300">
-                                <i class="fas fa-mobile-screen-button text-2xl text-blue-400 group-hover:text-white"></i>
+                            <div
+                                class="w-14 h-14 rounded-2xl bg-blue-500/10 border border-blue-500/20 flex items-center justify-center mb-6 group-hover:bg-blue-500 group-hover:text-white transition-all duration-300">
+                                <i
+                                    class="fas fa-mobile-screen-button text-2xl text-blue-400 group-hover:text-white"></i>
                             </div>
                             <h3 class="text-2xl font-bold mb-3 text-white">Application Engineering</h3>
                             <p class="text-slate-400 text-sm leading-relaxed mb-6">
-                                Full-stack reactive web applications and native iOS/Android clients architected for high performance, offline resiliency, and responsive micro-interactions.
+                                Full-stack reactive web applications and native iOS/Android clients architected for high
+                                performance, offline resiliency, and responsive micro-interactions.
                             </p>
                         </div>
                         <div class="flex flex-wrap gap-2 pt-4 border-t border-slate-800/80">
-                            <span class="text-[11px] font-mono px-2 py-1 rounded bg-slate-800 text-slate-300">Next.js</span>
-                            <span class="text-[11px] font-mono px-2 py-1 rounded bg-slate-800 text-slate-300">Flutter / Swift</span>
-                            <span class="text-[11px] font-mono px-2 py-1 rounded bg-slate-800 text-slate-300">Tailwind CSS</span>
+                            <span
+                                class="text-[11px] font-mono px-2 py-1 rounded bg-slate-800 text-slate-300">Next.js</span>
+                            <span class="text-[11px] font-mono px-2 py-1 rounded bg-slate-800 text-slate-300">Flutter /
+                                Swift</span>
+                            <span class="text-[11px] font-mono px-2 py-1 rounded bg-slate-800 text-slate-300">Tailwind
+                                CSS</span>
                         </div>
                     </div>
 
                     <!-- Capability 2 -->
                     <div class="p-8 rounded-3xl glass-card spotlight-card flex flex-col justify-between group">
                         <div>
-                            <div class="w-14 h-14 rounded-2xl bg-purple-500/10 border border-purple-500/20 flex items-center justify-center mb-6 group-hover:bg-purple-500 group-hover:text-white transition-all duration-300">
+                            <div
+                                class="w-14 h-14 rounded-2xl bg-purple-500/10 border border-purple-500/20 flex items-center justify-center mb-6 group-hover:bg-purple-500 group-hover:text-white transition-all duration-300">
                                 <i class="fas fa-robot text-2xl text-purple-400 group-hover:text-white"></i>
                             </div>
                             <h3 class="text-2xl font-bold mb-3 text-white">AI Agent Orchestration</h3>
                             <p class="text-slate-400 text-sm leading-relaxed mb-6">
-                                Infusing modern software with multi-agent intelligence, autonomous task execution, and self-healing n8n automation pipelines that cut operational overhead.
+                                Infusing modern software with multi-agent intelligence, autonomous task execution, and
+                                self-healing n8n automation pipelines that cut operational overhead.
                             </p>
                         </div>
                         <div class="flex flex-wrap gap-2 pt-4 border-t border-slate-800/80">
-                            <span class="text-[11px] font-mono px-2 py-1 rounded bg-slate-800 text-slate-300">Agent Swarms</span>
-                            <span class="text-[11px] font-mono px-2 py-1 rounded bg-slate-800 text-slate-300">n8n Pipelines</span>
-                            <span class="text-[11px] font-mono px-2 py-1 rounded bg-slate-800 text-slate-300">Tool Augmented LLMs</span>
+                            <span class="text-[11px] font-mono px-2 py-1 rounded bg-slate-800 text-slate-300">Agent
+                                Swarms</span>
+                            <span class="text-[11px] font-mono px-2 py-1 rounded bg-slate-800 text-slate-300">n8n
+                                Pipelines</span>
+                            <span class="text-[11px] font-mono px-2 py-1 rounded bg-slate-800 text-slate-300">Tool
+                                Augmented LLMs</span>
                         </div>
                     </div>
 
                     <!-- Capability 3 -->
                     <div class="p-8 rounded-3xl glass-card spotlight-card flex flex-col justify-between group">
                         <div>
-                            <div class="w-14 h-14 rounded-2xl bg-emerald-500/10 border border-emerald-500/20 flex items-center justify-center mb-6 group-hover:bg-emerald-500 group-hover:text-white transition-all duration-300">
+                            <div
+                                class="w-14 h-14 rounded-2xl bg-emerald-500/10 border border-emerald-500/20 flex items-center justify-center mb-6 group-hover:bg-emerald-500 group-hover:text-white transition-all duration-300">
                                 <i class="fas fa-microchip text-2xl text-emerald-400 group-hover:text-white"></i>
                             </div>
                             <h3 class="text-2xl font-bold mb-3 text-white">Hardware & Mobile Sensing</h3>
                             <p class="text-slate-400 text-sm leading-relaxed mb-6">
-                                Precision signal processing and sensor fusion utilizing gyroscope, accelerometer, and magnetometer hardware to perform high-speed physical telemetry.
+                                Precision signal processing and sensor fusion utilizing gyroscope, accelerometer, and
+                                magnetometer hardware to perform high-speed physical telemetry.
                             </p>
                         </div>
                         <div class="flex flex-wrap gap-2 pt-4 border-t border-slate-800/80">
-                            <span class="text-[11px] font-mono px-2 py-1 rounded bg-slate-800 text-slate-300">CoreMotion</span>
-                            <span class="text-[11px] font-mono px-2 py-1 rounded bg-slate-800 text-slate-300">Kalman Filters</span>
-                            <span class="text-[11px] font-mono px-2 py-1 rounded bg-slate-800 text-slate-300">Low-Latency DSP</span>
+                            <span
+                                class="text-[11px] font-mono px-2 py-1 rounded bg-slate-800 text-slate-300">CoreMotion</span>
+                            <span class="text-[11px] font-mono px-2 py-1 rounded bg-slate-800 text-slate-300">Kalman
+                                Filters</span>
+                            <span
+                                class="text-[11px] font-mono px-2 py-1 rounded bg-slate-800 text-slate-300">Low-Latency
+                                DSP</span>
                         </div>
                     </div>
 
                     <!-- Capability 4 -->
                     <div class="p-8 rounded-3xl glass-card spotlight-card flex flex-col justify-between group">
                         <div>
-                            <div class="w-14 h-14 rounded-2xl bg-cyan-500/10 border border-cyan-500/20 flex items-center justify-center mb-6 group-hover:bg-cyan-500 group-hover:text-white transition-all duration-300">
+                            <div
+                                class="w-14 h-14 rounded-2xl bg-cyan-500/10 border border-cyan-500/20 flex items-center justify-center mb-6 group-hover:bg-cyan-500 group-hover:text-white transition-all duration-300">
                                 <i class="fas fa-cloud text-2xl text-cyan-400 group-hover:text-white"></i>
                             </div>
                             <h3 class="text-2xl font-bold mb-3 text-white">Cloud & Edge Architecture</h3>
                             <p class="text-slate-400 text-sm leading-relaxed mb-6">
-                                Resilient, containerized cloud infrastructure distributed across edge points of presence, ensuring global sub-second response times and 99.99% reliability.
+                                Resilient, containerized cloud infrastructure distributed across edge points of
+                                presence, ensuring global sub-second response times and 99.99% reliability.
                             </p>
                         </div>
                         <div class="flex flex-wrap gap-2 pt-4 border-t border-slate-800/80">
-                            <span class="text-[11px] font-mono px-2 py-1 rounded bg-slate-800 text-slate-300">Cloudflare Workers</span>
-                            <span class="text-[11px] font-mono px-2 py-1 rounded bg-slate-800 text-slate-300">Docker / K8s</span>
-                            <span class="text-[11px] font-mono px-2 py-1 rounded bg-slate-800 text-slate-300">PostgreSQL / Redis</span>
+                            <span class="text-[11px] font-mono px-2 py-1 rounded bg-slate-800 text-slate-300">Cloudflare
+                                Workers</span>
+                            <span class="text-[11px] font-mono px-2 py-1 rounded bg-slate-800 text-slate-300">Docker /
+                                K8s</span>
+                            <span class="text-[11px] font-mono px-2 py-1 rounded bg-slate-800 text-slate-300">PostgreSQL
+                                / Redis</span>
                         </div>
                     </div>
 
                     <!-- Capability 5 -->
                     <div class="p-8 rounded-3xl glass-card spotlight-card flex flex-col justify-between group">
                         <div>
-                            <div class="w-14 h-14 rounded-2xl bg-amber-500/10 border border-amber-500/20 flex items-center justify-center mb-6 group-hover:bg-amber-500 group-hover:text-white transition-all duration-300">
+                            <div
+                                class="w-14 h-14 rounded-2xl bg-amber-500/10 border border-amber-500/20 flex items-center justify-center mb-6 group-hover:bg-amber-500 group-hover:text-white transition-all duration-300">
                                 <i class="fas fa-train text-2xl text-amber-400 group-hover:text-white"></i>
                             </div>
                             <h3 class="text-2xl font-bold mb-3 text-white">Industrial Logistics & Safety</h3>
                             <p class="text-slate-400 text-sm leading-relaxed mb-6">
-                                Specialized enterprise tools for railway block management, workforce roster compliance, and overhead equipment monitoring that enforce strict safety protocols.
+                                Specialized enterprise tools for railway block management, workforce roster compliance,
+                                and overhead equipment monitoring that enforce strict safety protocols.
                             </p>
                         </div>
                         <div class="flex flex-wrap gap-2 pt-4 border-t border-slate-800/80">
-                            <span class="text-[11px] font-mono px-2 py-1 rounded bg-slate-800 text-slate-300">RailBlock</span>
-                            <span class="text-[11px] font-mono px-2 py-1 rounded bg-slate-800 text-slate-300">Audit Logs</span>
-                            <span class="text-[11px] font-mono px-2 py-1 rounded bg-slate-800 text-slate-300">Fail-Safe Logic</span>
+                            <span
+                                class="text-[11px] font-mono px-2 py-1 rounded bg-slate-800 text-slate-300">RailBlock</span>
+                            <span class="text-[11px] font-mono px-2 py-1 rounded bg-slate-800 text-slate-300">Audit
+                                Logs</span>
+                            <span class="text-[11px] font-mono px-2 py-1 rounded bg-slate-800 text-slate-300">Fail-Safe
+                                Logic</span>
                         </div>
                     </div>
 
                     <!-- Capability 6 -->
                     <div class="p-8 rounded-3xl glass-card spotlight-card flex flex-col justify-between group">
                         <div>
-                            <div class="w-14 h-14 rounded-2xl bg-pink-500/10 border border-pink-500/20 flex items-center justify-center mb-6 group-hover:bg-pink-500 group-hover:text-white transition-all duration-300">
+                            <div
+                                class="w-14 h-14 rounded-2xl bg-pink-500/10 border border-pink-500/20 flex items-center justify-center mb-6 group-hover:bg-pink-500 group-hover:text-white transition-all duration-300">
                                 <i class="fas fa-qrcode text-2xl text-pink-400 group-hover:text-white"></i>
                             </div>
                             <h3 class="text-2xl font-bold mb-3 text-white">QR Commerce & SaaS Platforms</h3>
                             <p class="text-slate-400 text-sm leading-relaxed mb-6">
-                                Frictionless contactless platforms designed for modern venues and hospitality businesses, featuring instant QR order orchestration and deep guest analytics.
+                                Frictionless contactless platforms designed for modern venues and hospitality
+                                businesses, featuring instant QR order orchestration and deep guest analytics.
                             </p>
                         </div>
                         <div class="flex flex-wrap gap-2 pt-4 border-t border-slate-800/80">
-                            <span class="text-[11px] font-mono px-2 py-1 rounded bg-slate-800 text-slate-300">Scan The Table</span>
-                            <span class="text-[11px] font-mono px-2 py-1 rounded bg-slate-800 text-slate-300">Dynamic Menus</span>
-                            <span class="text-[11px] font-mono px-2 py-1 rounded bg-slate-800 text-slate-300">Stripe / Webhooks</span>
+                            <span class="text-[11px] font-mono px-2 py-1 rounded bg-slate-800 text-slate-300">Scan The
+                                Table</span>
+                            <span class="text-[11px] font-mono px-2 py-1 rounded bg-slate-800 text-slate-300">Dynamic
+                                Menus</span>
+                            <span class="text-[11px] font-mono px-2 py-1 rounded bg-slate-800 text-slate-300">Stripe /
+                                Webhooks</span>
                         </div>
                     </div>
 
@@ -597,40 +610,51 @@
             <div class="max-w-7xl mx-auto">
                 <div class="flex flex-col md:flex-row md:items-end justify-between mb-16 gap-4">
                     <div>
-                        <div class="inline-flex items-center gap-2 px-3 py-1 rounded-md bg-blue-500/10 border border-blue-500/20 text-blue-400 text-xs font-mono font-semibold uppercase mb-3">
+                        <div
+                            class="inline-flex items-center gap-2 px-3 py-1 rounded-md bg-blue-500/10 border border-blue-500/20 text-blue-400 text-xs font-mono font-semibold uppercase mb-3">
                             <i class="fas fa-folder-open"></i> Enterprise Suite
                         </div>
                         <h2 class="text-4xl md:text-5xl font-black tracking-tight">The Portfolio</h2>
-                        <p class="text-slate-400 mt-2 text-lg">A selection of tools, platforms, and systems we've engineered.</p>
+                        <p class="text-slate-400 mt-2 text-lg">A selection of tools, platforms, and systems we've
+                            engineered.</p>
                     </div>
-                    <div class="text-slate-400 text-sm font-mono tracking-wider bg-slate-900 px-4 py-2 rounded-xl border border-slate-800">
+                    <div
+                        class="text-slate-400 text-sm font-mono tracking-wider bg-slate-900 px-4 py-2 rounded-xl border border-slate-800">
                         STATUS: PRODUCTION DEPLOYED
                     </div>
                 </div>
 
                 <!-- Bento Grid -->
                 <div class="grid lg:grid-cols-3 gap-8">
-                    
+
                     <!-- Project 1: Deflection (Hero Bento) -->
-                    <div class="lg:col-span-2 p-8 md:p-10 rounded-[2.5rem] bg-gradient-to-br from-slate-900/90 via-slate-900/60 to-blue-950/30 border border-white/10 flex flex-col justify-between hover:border-blue-500/40 transition-all duration-300 relative overflow-hidden group">
-                        <div class="absolute -right-20 -bottom-20 w-80 h-80 bg-blue-600/10 rounded-full blur-3xl pointer-events-none group-hover:bg-blue-600/20 transition-all"></div>
+                    <div
+                        class="lg:col-span-2 p-8 md:p-10 rounded-[2.5rem] bg-gradient-to-br from-slate-900/90 via-slate-900/60 to-blue-950/30 border border-white/10 flex flex-col justify-between hover:border-blue-500/40 transition-all duration-300 relative overflow-hidden group">
+                        <div
+                            class="absolute -right-20 -bottom-20 w-80 h-80 bg-blue-600/10 rounded-full blur-3xl pointer-events-none group-hover:bg-blue-600/20 transition-all">
+                        </div>
                         <div>
                             <div class="flex flex-wrap justify-between items-center gap-4 mb-6">
                                 <div class="flex items-center gap-3">
-                                    <div class="w-12 h-12 rounded-2xl bg-blue-500/20 border border-blue-500/30 flex items-center justify-center text-blue-400 font-bold text-xl">
+                                    <div
+                                        class="w-12 h-12 rounded-2xl bg-blue-500/20 border border-blue-500/30 flex items-center justify-center text-blue-400 font-bold text-xl">
                                         &Delta;
                                     </div>
                                     <div>
                                         <h3 class="text-3xl font-extrabold text-white">Deflection</h3>
-                                        <span class="text-xs text-blue-400 font-mono">Structural Sensing &amp; Physics Analytics</span>
+                                        <span class="text-xs text-blue-400 font-mono">Structural Sensing &amp; Physics
+                                            Analytics</span>
                                     </div>
                                 </div>
-                                <span class="text-xs font-mono font-bold text-blue-400 px-3.5 py-1.5 bg-blue-500/10 rounded-full border border-blue-500/20">
+                                <span
+                                    class="text-xs font-mono font-bold text-blue-400 px-3.5 py-1.5 bg-blue-500/10 rounded-full border border-blue-500/20">
                                     Mobile Sensor Application
                                 </span>
                             </div>
                             <p class="text-slate-300 text-base md:text-lg leading-relaxed mb-8 max-w-2xl">
-                                A high-precision measurement system leveraging smartphone hardware sensors (gyroscope, accelerometer, high-frequency IMU) to analyze structural deflection, modal vibration frequencies, and mechanical strain in real time without costly specialized hardware.
+                                A high-precision measurement system leveraging smartphone hardware sensors (gyroscope,
+                                accelerometer, high-frequency IMU) to analyze structural deflection, modal vibration
+                                frequencies, and mechanical strain in real time without costly specialized hardware.
                             </p>
                             <div class="grid sm:grid-cols-3 gap-4 mb-8">
                                 <div class="p-4 rounded-2xl bg-slate-950/60 border border-slate-800">
@@ -649,11 +673,15 @@
                         </div>
                         <div class="flex flex-wrap justify-between items-center gap-4 pt-6 border-t border-slate-800">
                             <div class="flex flex-wrap gap-2">
-                                <span class="text-xs text-slate-400 font-mono bg-slate-800/80 px-2.5 py-1 rounded">#SensorFusion</span>
-                                <span class="text-xs text-slate-400 font-mono bg-slate-800/80 px-2.5 py-1 rounded">#VibrationAnalysis</span>
-                                <span class="text-xs text-slate-400 font-mono bg-slate-800/80 px-2.5 py-1 rounded">#InertialPhysics</span>
+                                <span
+                                    class="text-xs text-slate-400 font-mono bg-slate-800/80 px-2.5 py-1 rounded">#SensorFusion</span>
+                                <span
+                                    class="text-xs text-slate-400 font-mono bg-slate-800/80 px-2.5 py-1 rounded">#VibrationAnalysis</span>
+                                <span
+                                    class="text-xs text-slate-400 font-mono bg-slate-800/80 px-2.5 py-1 rounded">#InertialPhysics</span>
                             </div>
-                            <a href="DeflectionPrivacy.html" class="text-sm font-semibold text-blue-400 hover:text-blue-300 flex items-center gap-1.5 transition">
+                            <a href="DeflectionPrivacy.html"
+                                class="text-sm font-semibold text-blue-400 hover:text-blue-300 flex items-center gap-1.5 transition">
                                 <span>Policy &amp; Permissions</span>
                                 <i class="fas fa-arrow-right text-xs"></i>
                             </a>
@@ -661,19 +689,24 @@
                     </div>
 
                     <!-- Project 2: RailBlock -->
-                    <div class="p-8 md:p-10 rounded-[2.5rem] bg-gradient-to-br from-slate-900/90 to-purple-950/20 border border-white/10 flex flex-col justify-between hover:border-purple-500/40 transition-all duration-300 group">
+                    <div
+                        class="p-8 md:p-10 rounded-[2.5rem] bg-gradient-to-br from-slate-900/90 to-purple-950/20 border border-white/10 flex flex-col justify-between hover:border-purple-500/40 transition-all duration-300 group">
                         <div>
                             <div class="flex justify-between items-start mb-6">
-                                <div class="w-12 h-12 rounded-2xl bg-purple-500/20 border border-purple-500/30 flex items-center justify-center text-purple-400 font-bold text-xl">
+                                <div
+                                    class="w-12 h-12 rounded-2xl bg-purple-500/20 border border-purple-500/30 flex items-center justify-center text-purple-400 font-bold text-xl">
                                     <i class="fas fa-train-subway"></i>
                                 </div>
-                                <span class="text-xs font-mono font-bold text-purple-400 px-3.5 py-1.5 bg-purple-500/10 rounded-full border border-purple-500/20">
+                                <span
+                                    class="text-xs font-mono font-bold text-purple-400 px-3.5 py-1.5 bg-purple-500/10 rounded-full border border-purple-500/20">
                                     Operations
                                 </span>
                             </div>
                             <h3 class="text-2xl font-extrabold text-white mb-2">RailBlock</h3>
                             <p class="text-slate-400 text-sm md:text-base leading-relaxed mb-6">
-                                A professional-grade railway block utility designed to digitize and optimize operational traffic safety, track downtime windows, and mission-critical coordination for authorized personnel.
+                                A professional-grade railway block utility designed to digitize and optimize operational
+                                traffic safety, track downtime windows, and mission-critical coordination for authorized
+                                personnel.
                             </p>
                             <div class="p-4 rounded-2xl bg-slate-950/60 border border-slate-800 mb-6">
                                 <div class="text-xs text-slate-500 font-mono mb-1">SAFETY RECORD</div>
@@ -684,31 +717,43 @@
                         </div>
                         <div class="flex flex-wrap justify-between items-center gap-4 pt-6 border-t border-slate-800">
                             <span class="text-xs text-slate-400 font-mono">#RailwayLogistics</span>
-                            <a href="terms.html" class="text-sm font-semibold text-purple-400 hover:text-purple-300 transition">
+                            <a href="terms.html"
+                                class="text-sm font-semibold text-purple-400 hover:text-purple-300 transition">
                                 Terms of Use &rarr;
                             </a>
                         </div>
                     </div>
 
                     <!-- Project 3: Scan The Table -->
-                    <div class="lg:col-span-2 p-8 md:p-10 rounded-[2.5rem] bg-gradient-to-br from-slate-900/90 to-emerald-950/20 border border-white/10 flex flex-col md:flex-row items-center gap-8 hover:border-emerald-500/40 transition-all duration-300 group">
+                    <div
+                        class="lg:col-span-2 p-8 md:p-10 rounded-[2.5rem] bg-gradient-to-br from-slate-900/90 to-emerald-950/20 border border-white/10 flex flex-col md:flex-row items-center gap-8 hover:border-emerald-500/40 transition-all duration-300 group">
                         <div class="flex-1">
                             <div class="flex items-center gap-3 mb-4">
-                                <div class="w-10 h-10 rounded-xl bg-emerald-500/20 border border-emerald-500/30 flex items-center justify-center text-emerald-400">
+                                <div
+                                    class="w-10 h-10 rounded-xl bg-emerald-500/20 border border-emerald-500/30 flex items-center justify-center text-emerald-400">
                                     <i class="fas fa-utensils"></i>
                                 </div>
                                 <h3 class="text-2xl md:text-3xl font-extrabold text-white">Scan The Table</h3>
-                                <span class="text-xs font-mono font-bold text-emerald-400 px-3 py-1 bg-emerald-500/10 rounded-full border border-emerald-500/20">
+                                <span
+                                    class="text-xs font-mono font-bold text-emerald-400 px-3 py-1 bg-emerald-500/10 rounded-full border border-emerald-500/20">
                                     Hospitality SaaS
                                 </span>
                             </div>
                             <p class="text-slate-300 text-base leading-relaxed mb-6">
-                                Our premier Hospitality Tech solution. A contactless QR-based platform engineered to streamline dining orders, eliminate friction at peak hours, and provide deep operational analytics for modern culinary venues.
+                                Our premier Hospitality Tech solution. A contactless QR-based platform engineered to
+                                streamline dining orders, eliminate friction at peak hours, and provide deep operational
+                                analytics for modern culinary venues.
                             </p>
                             <div class="flex flex-wrap gap-3">
-                                <span class="text-xs font-mono text-emerald-300/80 bg-emerald-950/50 border border-emerald-500/20 px-3 py-1 rounded-lg">Instant QR Menus</span>
-                                <span class="text-xs font-mono text-emerald-300/80 bg-emerald-950/50 border border-emerald-500/20 px-3 py-1 rounded-lg">Table-Side Payments</span>
-                                <span class="text-xs font-mono text-emerald-300/80 bg-emerald-950/50 border border-emerald-500/20 px-3 py-1 rounded-lg">Venue Dashboard</span>
+                                <span
+                                    class="text-xs font-mono text-emerald-300/80 bg-emerald-950/50 border border-emerald-500/20 px-3 py-1 rounded-lg">Instant
+                                    QR Menus</span>
+                                <span
+                                    class="text-xs font-mono text-emerald-300/80 bg-emerald-950/50 border border-emerald-500/20 px-3 py-1 rounded-lg">Table-Side
+                                    Payments</span>
+                                <span
+                                    class="text-xs font-mono text-emerald-300/80 bg-emerald-950/50 border border-emerald-500/20 px-3 py-1 rounded-lg">Venue
+                                    Dashboard</span>
                             </div>
                         </div>
                         <div class="w-full md:w-auto">
@@ -719,24 +764,32 @@
                     </div>
 
                     <!-- Project 4: RosterLab & OHE Records -->
-                    <div class="p-8 md:p-10 rounded-[2.5rem] bg-gradient-to-br from-slate-900/90 to-cyan-950/20 border border-white/10 flex flex-col justify-between hover:border-cyan-500/40 transition-all duration-300 group">
+                    <div
+                        class="p-8 md:p-10 rounded-[2.5rem] bg-gradient-to-br from-slate-900/90 to-cyan-950/20 border border-white/10 flex flex-col justify-between hover:border-cyan-500/40 transition-all duration-300 group">
                         <div>
                             <div class="flex justify-between items-start mb-6">
-                                <div class="w-12 h-12 rounded-2xl bg-cyan-500/20 border border-cyan-500/30 flex items-center justify-center text-cyan-400 font-bold text-xl">
+                                <div
+                                    class="w-12 h-12 rounded-2xl bg-cyan-500/20 border border-cyan-500/30 flex items-center justify-center text-cyan-400 font-bold text-xl">
                                     <i class="fas fa-calendar-check"></i>
                                 </div>
-                                <span class="text-xs font-mono font-bold text-cyan-400 px-3.5 py-1.5 bg-cyan-500/10 rounded-full border border-cyan-500/20">
+                                <span
+                                    class="text-xs font-mono font-bold text-cyan-400 px-3.5 py-1.5 bg-cyan-500/10 rounded-full border border-cyan-500/20">
                                     Workforce &amp; Infra
                                 </span>
                             </div>
                             <h3 class="text-2xl font-extrabold text-white mb-2">RosterLab &amp; OHE Records</h3>
                             <p class="text-slate-400 text-sm leading-relaxed mb-6">
-                                Dynamic shift allocation and overhead railway electrification inspection suites ensuring continuous regulatory compliance and seamless record-keeping.
+                                Dynamic shift allocation and overhead railway electrification inspection suites ensuring
+                                continuous regulatory compliance and seamless record-keeping.
                             </p>
                         </div>
                         <div class="flex flex-wrap justify-between items-center gap-4 pt-6 border-t border-slate-800">
-                            <a href="RosterLabPrivacy.html" class="text-xs font-semibold text-cyan-400 hover:text-cyan-300 transition">RosterLab Privacy</a>
-                            <a href="DeflectionPrivacy.html" class="text-xs font-semibold text-cyan-400 hover:text-cyan-300 transition">OHE Records Privacy</a>
+                            <a href="RosterLabPrivacy.html"
+                                class="text-xs font-semibold text-cyan-400 hover:text-cyan-300 transition">RosterLab
+                                Privacy</a>
+                            <a href="DeflectionPrivacy.html"
+                                class="text-xs font-semibold text-cyan-400 hover:text-cyan-300 transition">OHE Records
+                                Privacy</a>
                         </div>
                     </div>
 
@@ -748,23 +801,27 @@
         <section id="estimator" class="py-24 px-6 border-t border-white/[0.06] relative">
             <div class="max-w-5xl mx-auto">
                 <div class="text-center max-w-2xl mx-auto mb-16">
-                    <div class="inline-flex items-center gap-2 px-3 py-1 rounded-md bg-emerald-500/10 border border-emerald-500/20 text-emerald-400 text-xs font-mono font-semibold uppercase mb-3">
+                    <div
+                        class="inline-flex items-center gap-2 px-3 py-1 rounded-md bg-emerald-500/10 border border-emerald-500/20 text-emerald-400 text-xs font-mono font-semibold uppercase mb-3">
                         <i class="fas fa-calculator"></i> Real-Time Architecture Scope
                     </div>
                     <h2 class="text-4xl md:text-5xl font-black tracking-tight mb-4">
                         Project &amp; <span class="gradient-text">Timeline Estimator</span>
                     </h2>
                     <p class="text-slate-400 text-base">
-                        Select the technological capabilities required for your build to calculate estimated deployment duration and architecture tier:
+                        Select the technological capabilities required for your build to calculate estimated deployment
+                        duration and architecture tier:
                     </p>
                 </div>
 
                 <div class="grid md:grid-cols-3 gap-8 p-8 rounded-3xl glass-card border border-white/10">
                     <!-- Left: Selectable Options -->
                     <div class="md:col-span-2 space-y-4">
-                        <label class="block text-xs font-mono text-slate-400 uppercase tracking-wider mb-2">Required Capabilities</label>
+                        <label class="block text-xs font-mono text-slate-400 uppercase tracking-wider mb-2">Required
+                            Capabilities</label>
                         <div class="grid sm:grid-cols-2 gap-3">
-                            <div class="estimator-option p-4 rounded-2xl border border-blue-500 bg-blue-600/20 text-white cursor-pointer transition select-none flex items-center justify-between" data-value="ai-agent">
+                            <div class="estimator-option p-4 rounded-2xl border border-blue-500 bg-blue-600/20 text-white cursor-pointer transition select-none flex items-center justify-between"
+                                data-value="ai-agent">
                                 <div class="flex items-center gap-3">
                                     <i class="fas fa-brain text-blue-400"></i>
                                     <span class="font-bold text-sm">AI Agent &amp; LLM Automation</span>
@@ -772,7 +829,8 @@
                                 <i class="fas fa-check text-xs text-blue-400"></i>
                             </div>
 
-                            <div class="estimator-option p-4 rounded-2xl border border-blue-500 bg-blue-600/20 text-white cursor-pointer transition select-none flex items-center justify-between" data-value="mobile">
+                            <div class="estimator-option p-4 rounded-2xl border border-blue-500 bg-blue-600/20 text-white cursor-pointer transition select-none flex items-center justify-between"
+                                data-value="mobile">
                                 <div class="flex items-center gap-3">
                                     <i class="fas fa-mobile-screen text-blue-400"></i>
                                     <span class="font-bold text-sm">Mobile App (iOS / Android)</span>
@@ -780,7 +838,8 @@
                                 <i class="fas fa-check text-xs text-blue-400"></i>
                             </div>
 
-                            <div class="estimator-option p-4 rounded-2xl border border-slate-800 bg-slate-900/50 text-slate-400 hover:text-white cursor-pointer transition select-none flex items-center justify-between" data-value="sensor-telemetry">
+                            <div class="estimator-option p-4 rounded-2xl border border-slate-800 bg-slate-900/50 text-slate-400 hover:text-white cursor-pointer transition select-none flex items-center justify-between"
+                                data-value="sensor-telemetry">
                                 <div class="flex items-center gap-3">
                                     <i class="fas fa-microchip text-slate-400"></i>
                                     <span class="font-bold text-sm">Hardware &amp; Sensor Fusion</span>
@@ -788,7 +847,8 @@
                                 <i class="fas fa-check text-xs"></i>
                             </div>
 
-                            <div class="estimator-option p-4 rounded-2xl border border-slate-800 bg-slate-900/50 text-slate-400 hover:text-white cursor-pointer transition select-none flex items-center justify-between" data-value="cloud-edge">
+                            <div class="estimator-option p-4 rounded-2xl border border-slate-800 bg-slate-900/50 text-slate-400 hover:text-white cursor-pointer transition select-none flex items-center justify-between"
+                                data-value="cloud-edge">
                                 <div class="flex items-center gap-3">
                                     <i class="fas fa-cloud text-slate-400"></i>
                                     <span class="font-bold text-sm">Distributed Cloud &amp; Edge API</span>
@@ -796,7 +856,8 @@
                                 <i class="fas fa-check text-xs"></i>
                             </div>
 
-                            <div class="estimator-option p-4 rounded-2xl border border-slate-800 bg-slate-900/50 text-slate-400 hover:text-white cursor-pointer transition select-none flex items-center justify-between" data-value="qr-commerce">
+                            <div class="estimator-option p-4 rounded-2xl border border-slate-800 bg-slate-900/50 text-slate-400 hover:text-white cursor-pointer transition select-none flex items-center justify-between"
+                                data-value="qr-commerce">
                                 <div class="flex items-center gap-3">
                                     <i class="fas fa-qrcode text-slate-400"></i>
                                     <span class="font-bold text-sm">QR Commerce &amp; Hospitality SaaS</span>
@@ -804,10 +865,11 @@
                                 <i class="fas fa-check text-xs"></i>
                             </div>
 
-                            <div class="estimator-option p-4 rounded-2xl border border-slate-800 bg-slate-900/50 text-slate-400 hover:text-white cursor-pointer transition select-none flex items-center justify-between" data-value="motion-design">
+                            <div class="estimator-option p-4 rounded-2xl border border-slate-800 bg-slate-900/50 text-slate-400 hover:text-white cursor-pointer transition select-none flex items-center justify-between"
+                                data-value="cloud-arch">
                                 <div class="flex items-center gap-3">
-                                    <i class="fas fa-film text-slate-400"></i>
-                                    <span class="font-bold text-sm">Generative Kinetic Motion UI</span>
+                                    <i class="fas fa-server text-slate-400"></i>
+                                    <span class="font-bold text-sm">Cloud Architecture &amp; DevOps</span>
                                 </div>
                                 <i class="fas fa-check text-xs"></i>
                             </div>
@@ -818,7 +880,8 @@
                     <div class="p-6 rounded-2xl bg-slate-950 border border-white/10 flex flex-col justify-between">
                         <div>
                             <span class="text-xs font-mono text-slate-500 uppercase">CALCULATED BLUEPRINT</span>
-                            <div id="estimatedTier" class="text-xl font-black text-white mt-1 mb-4">Advanced Growth Solution</div>
+                            <div id="estimatedTier" class="text-xl font-black text-white mt-1 mb-4">Advanced Growth
+                                Solution</div>
 
                             <div class="p-4 rounded-xl bg-slate-900/80 border border-slate-800 mb-6">
                                 <div class="text-[11px] font-mono text-slate-400">ESTIMATED TIMELINE</div>
@@ -845,31 +908,36 @@
                 <div class="grid lg:grid-cols-2 gap-16">
                     <!-- Left: Contact Details -->
                     <div>
-                        <div class="inline-flex items-center gap-2 px-3 py-1 rounded-md bg-blue-500/10 border border-blue-500/20 text-blue-400 text-xs font-mono font-semibold uppercase mb-3">
+                        <div
+                            class="inline-flex items-center gap-2 px-3 py-1 rounded-md bg-blue-500/10 border border-blue-500/20 text-blue-400 text-xs font-mono font-semibold uppercase mb-3">
                             <i class="fas fa-comments"></i> Get In Touch
                         </div>
                         <h2 class="text-4xl md:text-5xl font-black tracking-tight mb-6">
                             Let&rsquo;s Engineer the <span class="gradient-text">Future</span> Together
                         </h2>
                         <p class="text-slate-400 text-base md:text-lg leading-relaxed mb-8">
-                            Whether you need specialized mobile sensor intelligence, mission-critical operational software, or an autonomous AI agent swarm, we are ready to build.
+                            Whether you need specialized mobile sensor intelligence, mission-critical operational
+                            software, or an autonomous AI agent swarm, we are ready to build.
                         </p>
 
                         <div class="space-y-6">
                             <div class="flex items-center gap-4">
-                                <div class="w-12 h-12 rounded-xl bg-slate-900 border border-slate-800 flex items-center justify-center text-blue-400">
+                                <div
+                                    class="w-12 h-12 rounded-xl bg-slate-900 border border-slate-800 flex items-center justify-center text-blue-400">
                                     <i class="fas fa-envelope text-lg"></i>
                                 </div>
                                 <div>
                                     <div class="text-xs font-mono text-slate-500">DIRECT EMAIL</div>
-                                    <a href="mailto:support@agasty.cloud" class="text-lg font-bold text-white hover:text-blue-400 transition">
+                                    <a href="mailto:support@agasty.cloud"
+                                        class="text-lg font-bold text-white hover:text-blue-400 transition">
                                         support@agasty.cloud
                                     </a>
                                 </div>
                             </div>
 
                             <div class="flex items-center gap-4">
-                                <div class="w-12 h-12 rounded-xl bg-slate-900 border border-slate-800 flex items-center justify-center text-purple-400">
+                                <div
+                                    class="w-12 h-12 rounded-xl bg-slate-900 border border-slate-800 flex items-center justify-center text-purple-400">
                                     <i class="fas fa-paper-plane text-lg"></i>
                                 </div>
                                 <div>
@@ -882,7 +950,8 @@
                             </div>
 
                             <div class="flex items-center gap-4">
-                                <div class="w-12 h-12 rounded-xl bg-slate-900 border border-slate-800 flex items-center justify-center text-emerald-400">
+                                <div
+                                    class="w-12 h-12 rounded-xl bg-slate-900 border border-slate-800 flex items-center justify-center text-emerald-400">
                                     <i class="fas fa-shield-check text-lg"></i>
                                 </div>
                                 <div>
@@ -899,44 +968,64 @@
                     <div class="bg-slate-900/40 p-8 rounded-3xl border border-white/10 glass">
                         <h3 class="text-2xl font-bold mb-6 text-white">Frequently Asked Questions</h3>
                         <div class="space-y-4">
-                            
+
                             <div class="faq-item border border-slate-800 rounded-2xl p-4 bg-slate-950/60">
-                                <button class="faq-question w-full flex justify-between items-center text-left font-bold text-sm md:text-base text-slate-200 hover:text-white">
+                                <button
+                                    class="faq-question w-full flex justify-between items-center text-left font-bold text-sm md:text-base text-slate-200 hover:text-white">
                                     <span>What platforms do your applications support?</span>
-                                    <i class="fas fa-chevron-down faq-icon transition-transform duration-300 text-xs text-slate-500"></i>
+                                    <i
+                                        class="fas fa-chevron-down faq-icon transition-transform duration-300 text-xs text-slate-500"></i>
                                 </button>
-                                <div class="faq-answer hidden mt-3 pt-3 border-t border-slate-800/80 text-sm text-slate-400 leading-relaxed">
-                                    We build native iOS, native Android, and cross-platform high-performance web applications using modern stacks (Swift, Kotlin, Flutter, React, Next.js, and Python backends).
+                                <div
+                                    class="faq-answer hidden mt-3 pt-3 border-t border-slate-800/80 text-sm text-slate-400 leading-relaxed">
+                                    We build native iOS, native Android, and cross-platform high-performance web
+                                    applications using modern stacks (Swift, Kotlin, Flutter, React, Next.js, and Python
+                                    backends).
                                 </div>
                             </div>
 
                             <div class="faq-item border border-slate-800 rounded-2xl p-4 bg-slate-950/60">
-                                <button class="faq-question w-full flex justify-between items-center text-left font-bold text-sm md:text-base text-slate-200 hover:text-white">
+                                <button
+                                    class="faq-question w-full flex justify-between items-center text-left font-bold text-sm md:text-base text-slate-200 hover:text-white">
                                     <span>How does Deflection analyze structural sensors?</span>
-                                    <i class="fas fa-chevron-down faq-icon transition-transform duration-300 text-xs text-slate-500"></i>
+                                    <i
+                                        class="fas fa-chevron-down faq-icon transition-transform duration-300 text-xs text-slate-500"></i>
                                 </button>
-                                <div class="faq-answer hidden mt-3 pt-3 border-t border-slate-800/80 text-sm text-slate-400 leading-relaxed">
-                                    Deflection leverages high-frequency IMU sensors (gyroscope and accelerometer) through advanced DSP Kalman filtering and structural mechanics formulas to compute dynamic and static deflection curves without external lasers.
+                                <div
+                                    class="faq-answer hidden mt-3 pt-3 border-t border-slate-800/80 text-sm text-slate-400 leading-relaxed">
+                                    Deflection leverages high-frequency IMU sensors (gyroscope and accelerometer)
+                                    through advanced DSP Kalman filtering and structural mechanics formulas to compute
+                                    dynamic and static deflection curves without external lasers.
                                 </div>
                             </div>
 
                             <div class="faq-item border border-slate-800 rounded-2xl p-4 bg-slate-950/60">
-                                <button class="faq-question w-full flex justify-between items-center text-left font-bold text-sm md:text-base text-slate-200 hover:text-white">
+                                <button
+                                    class="faq-question w-full flex justify-between items-center text-left font-bold text-sm md:text-base text-slate-200 hover:text-white">
                                     <span>Can Agasty integrate autonomous AI agents into existing workflows?</span>
-                                    <i class="fas fa-chevron-down faq-icon transition-transform duration-300 text-xs text-slate-500"></i>
+                                    <i
+                                        class="fas fa-chevron-down faq-icon transition-transform duration-300 text-xs text-slate-500"></i>
                                 </button>
-                                <div class="faq-answer hidden mt-3 pt-3 border-t border-slate-800/80 text-sm text-slate-400 leading-relaxed">
-                                    Yes. We design and deploy custom LLM agent meshes with secure tool-calling, automated n8n webhooks, internal database connectors, and enterprise permission controls.
+                                <div
+                                    class="faq-answer hidden mt-3 pt-3 border-t border-slate-800/80 text-sm text-slate-400 leading-relaxed">
+                                    Yes. We design and deploy custom LLM agent meshes with secure tool-calling,
+                                    automated n8n webhooks, internal database connectors, and enterprise permission
+                                    controls.
                                 </div>
                             </div>
 
                             <div class="faq-item border border-slate-800 rounded-2xl p-4 bg-slate-950/60">
-                                <button class="faq-question w-full flex justify-between items-center text-left font-bold text-sm md:text-base text-slate-200 hover:text-white">
+                                <button
+                                    class="faq-question w-full flex justify-between items-center text-left font-bold text-sm md:text-base text-slate-200 hover:text-white">
                                     <span>How do we initiate a project or engagement?</span>
-                                    <i class="fas fa-chevron-down faq-icon transition-transform duration-300 text-xs text-slate-500"></i>
+                                    <i
+                                        class="fas fa-chevron-down faq-icon transition-transform duration-300 text-xs text-slate-500"></i>
                                 </button>
-                                <div class="faq-answer hidden mt-3 pt-3 border-t border-slate-800/80 text-sm text-slate-400 leading-relaxed">
-                                    Fill out our quick consultation form or email us at support@agasty.cloud. We will schedule a technical discovery session within 24 hours to scope architecture, timeline, and deliverables.
+                                <div
+                                    class="faq-answer hidden mt-3 pt-3 border-t border-slate-800/80 text-sm text-slate-400 leading-relaxed">
+                                    Fill out our quick consultation form or email us at support@agasty.cloud. We will
+                                    schedule a technical discovery session within 24 hours to scope architecture,
+                                    timeline, and deliverables.
                                 </div>
                             </div>
 
@@ -945,24 +1034,33 @@
                 </div>
 
                 <!-- In-Page Embedded Consultation Form -->
-                <div id="embedded-form" class="mt-16 p-6 md:p-10 rounded-3xl glass-card border border-white/10 shadow-2xl relative overflow-hidden">
-                    <div class="flex flex-col sm:flex-row sm:items-center justify-between pb-6 border-b border-white/10 mb-6 gap-4">
+                <div id="embedded-form"
+                    class="mt-16 p-6 md:p-10 rounded-3xl glass-card border border-white/10 shadow-2xl relative overflow-hidden">
+                    <div
+                        class="flex flex-col sm:flex-row sm:items-center justify-between pb-6 border-b border-white/10 mb-6 gap-4">
                         <div>
-                            <div class="inline-flex items-center gap-2 px-3 py-1 rounded-md bg-blue-500/10 border border-blue-500/20 text-blue-400 text-xs font-mono uppercase mb-2">
+                            <div
+                                class="inline-flex items-center gap-2 px-3 py-1 rounded-md bg-blue-500/10 border border-blue-500/20 text-blue-400 text-xs font-mono uppercase mb-2">
                                 <i class="fas fa-file-signature"></i> Embedded Consultation Gateway
                             </div>
                             <h3 class="text-2xl md:text-3xl font-extrabold text-white">Direct Project Inquiry Form</h3>
-                            <p class="text-slate-400 text-sm mt-1">Submit your project scope, requirements, or architecture questions directly below:</p>
+                            <p class="text-slate-400 text-sm mt-1">Submit your project scope, requirements, or
+                                architecture questions directly below:</p>
                         </div>
-                        <div class="flex items-center gap-2 text-xs font-mono text-emerald-400 bg-emerald-950/40 border border-emerald-500/20 px-3 py-1.5 rounded-full w-max">
+                        <div
+                            class="flex items-center gap-2 text-xs font-mono text-emerald-400 bg-emerald-950/40 border border-emerald-500/20 px-3 py-1.5 rounded-full w-max">
                             <span class="w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></span>
                             <span>ENCRYPTED &bull; N8N ONLINE</span>
                         </div>
                     </div>
-                    
+
                     <!-- Embedded Iframe -->
-                    <div class="relative w-full rounded-2xl overflow-hidden bg-slate-950 border border-white/[0.08] shadow-inner">
-                        <iframe id="contactSectionIframe" src="https://n8n.agasty.cloud/form/0cb7287e-cd6f-48e4-9029-9852894f781b" class="w-full h-[650px] md:h-[700px] border-0 block" loading="lazy" title="Agasty Enterprises Direct Consultation Form"></iframe>
+                    <div
+                        class="relative w-full rounded-2xl overflow-hidden bg-slate-950 border border-white/[0.08] shadow-inner">
+                        <iframe id="contactSectionIframe"
+                            src="https://n8n.agasty.cloud/form/0cb7287e-cd6f-48e4-9029-9852894f781b"
+                            class="w-full h-[650px] md:h-[700px] border-0 block" loading="lazy"
+                            title="Agasty Enterprises Direct Consultation Form"></iframe>
                     </div>
                 </div>
 
@@ -979,7 +1077,8 @@
                     <div class="w-8 h-8 rounded-lg bg-blue-600 flex items-center justify-center text-white text-sm">
                         <i class="fas fa-cube"></i>
                     </div>
-                    <div class="text-2xl font-extrabold text-white tracking-tight">AGASTY<span class="text-blue-500">.CLOUD</span></div>
+                    <div class="text-2xl font-extrabold text-white tracking-tight">AGASTY<span
+                            class="text-blue-500">.CLOUD</span></div>
                 </div>
                 <p class="text-slate-500 text-sm">
                     &copy; 2026 Agasty Enterprises. Devised for the intelligent era. All rights reserved.
@@ -999,21 +1098,6 @@
         </div>
     </footer>
 
-    <!-- Fullscreen Motion Video Modal -->
-    <div id="motionModal" style="display: none; z-index: 99999;" class="fixed inset-0 z-[99999] bg-black/90 backdrop-blur-2xl hidden items-center justify-center p-4 md:p-10">
-        <div class="relative w-full max-w-5xl bg-slate-900 rounded-3xl overflow-hidden border border-white/20 shadow-2xl">
-            <div class="p-4 bg-slate-950 flex justify-between items-center border-b border-white/10">
-                <span class="text-sm font-mono text-slate-300">Spatial Motion Viewer</span>
-                <button id="modalClose" aria-label="Close Modal" class="w-8 h-8 rounded-lg bg-slate-800 text-slate-300 hover:text-white flex items-center justify-center cursor-pointer">
-                    <i class="fas fa-times"></i>
-                </button>
-            </div>
-            <div class="relative aspect-video bg-black flex items-center justify-center">
-                <video id="modalVideo" controls loop playsinline class="w-full h-full object-contain"></video>
-            </div>
-        </div>
-    </div>
-
     <!-- Embedded Consultation Form Modal -->
     <div id="formModal" style="display: none; z-index: 99999;" class="fixed inset-0 z-[99999] bg-slate-950/85 backdrop-blur-xl hidden items-center justify-center p-3 sm:p-6 md:p-10 transition-opacity duration-300" onclick="if (event.target === this) closeConsultationModal(event);">
         <div class="relative w-full max-w-4xl bg-slate-900 rounded-3xl overflow-hidden border border-white/20 shadow-2xl flex flex-col max-h-[92vh]">
@@ -1027,7 +1111,8 @@
                     <span class="ml-3 text-xs font-mono text-slate-300">agasty-gateway://consultation-form</span>
                 </div>
                 <div class="flex items-center gap-4">
-                    <span class="hidden sm:inline text-xs font-mono px-2.5 py-1 rounded bg-emerald-500/10 text-emerald-400 border border-emerald-500/20">
+                    <span
+                        class="hidden sm:inline text-xs font-mono px-2.5 py-1 rounded bg-emerald-500/10 text-emerald-400 border border-emerald-500/20">
                         <i class="fas fa-lock text-[10px] mr-1"></i> SSL 256-Bit Encrypted
                     </span>
                     <button id="formModalClose" onclick="closeConsultationModal(event)" aria-label="Close Form" class="w-8 h-8 rounded-lg bg-slate-800 text-slate-300 hover:text-white hover:bg-slate-700 flex items-center justify-center transition cursor-pointer">
@@ -1046,7 +1131,8 @@
             </div>
 
             <!-- Modal Footer Note -->
-            <div class="px-6 py-3 bg-slate-950/90 border-t border-white/[0.08] flex justify-between items-center text-xs text-slate-400 font-mono">
+            <div
+                class="px-6 py-3 bg-slate-950/90 border-t border-white/[0.08] flex justify-between items-center text-xs text-slate-400 font-mono">
                 <span>Agasty Enterprises &bull; Confidential &amp; Protected</span>
                 <span class="text-slate-500 text-[11px]">Direct n8n Integration</span>
             </div>
@@ -1056,4 +1142,5 @@
     <!-- Scripts -->
     <script src="assets/js/main.js"></script>
 </body>
+
 </html>
