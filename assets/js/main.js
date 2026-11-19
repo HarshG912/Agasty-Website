@@ -4,7 +4,7 @@
  * Project Estimator, Dynamic Spotlight, and Smooth UI Interactions.
  */
 
-document.addEventListener('DOMContentLoaded', () => {
+function initApp() {
     initParticleCanvas();
     initMotionReel();
     initDeflectionSimulator();
@@ -14,7 +14,13 @@ document.addEventListener('DOMContentLoaded', () => {
     initFaqAccordion();
     initStatsCounter();
     initEmbeddedFormModal();
-});
+}
+
+if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', initApp);
+} else {
+    initApp();
+}
 
 /* ----------------------------------------------------
    1. Interactive Neural Starfield / Particle Background
@@ -195,10 +201,11 @@ function initMotionReel() {
         setTimeout(() => {
             videoEl.src = item.video;
             videoEl.poster = item.poster;
+            videoEl.muted = true;
             videoEl.load();
             videoEl.play().catch(() => {});
             videoEl.style.opacity = '1';
-        }, 150);
+        }, 120);
 
         if (titleEl) titleEl.textContent = item.title;
         if (tagEl) tagEl.textContent = item.tag;
@@ -224,13 +231,16 @@ function initMotionReel() {
         tabsContainer.innerHTML = '';
         MOTION_LIBRARY.forEach((item, index) => {
             const btn = document.createElement('button');
-            btn.className = `px-3.5 py-2 text-xs font-semibold rounded-lg border transition-all flex items-center gap-2 ${
+            btn.className = `px-3.5 py-2 text-xs font-semibold rounded-lg border transition-all flex items-center gap-2 cursor-pointer ${
                 index === 0
                     ? 'bg-blue-600/30 border-blue-500 text-white'
                     : 'bg-slate-800/50 border-slate-700/60 text-slate-400 hover:text-white hover:bg-slate-800'
             }`;
             btn.innerHTML = `<span class="w-1.5 h-1.5 rounded-full ${index === 0 ? 'bg-blue-400' : 'bg-slate-500'}"></span> ${item.title}`;
-            btn.addEventListener('click', () => loadMotion(index));
+            btn.addEventListener('click', (e) => {
+                e.preventDefault();
+                loadMotion(index);
+            });
             tabsContainer.appendChild(btn);
         });
     }
@@ -253,9 +263,16 @@ function initMotionReel() {
         console.warn('Video failed to play:', e);
     });
 
+    // Click directly on video to play/pause
+    videoEl.style.cursor = 'pointer';
+    videoEl.addEventListener('click', () => {
+        if (playPauseBtn) playPauseBtn.click();
+    });
+
     // Controls
     if (playPauseBtn) {
-        playPauseBtn.addEventListener('click', () => {
+        playPauseBtn.addEventListener('click', (e) => {
+            e.preventDefault();
             if (videoEl.paused) {
                 videoEl.play();
                 playPauseBtn.innerHTML = '<i class="fas fa-pause"></i>';
@@ -267,7 +284,8 @@ function initMotionReel() {
     }
 
     if (muteBtn) {
-        muteBtn.addEventListener('click', () => {
+        muteBtn.addEventListener('click', (e) => {
+            e.preventDefault();
             videoEl.muted = !videoEl.muted;
             muteBtn.innerHTML = videoEl.muted ? '<i class="fas fa-volume-mute"></i>' : '<i class="fas fa-volume-up"></i>';
         });
@@ -275,28 +293,37 @@ function initMotionReel() {
 
     // Modal preview
     if (openModalBtn && modal && modalVideo) {
-        openModalBtn.addEventListener('click', () => {
+        openModalBtn.addEventListener('click', (e) => {
+            e.preventDefault();
             const item = MOTION_LIBRARY[currentIndex];
             modalVideo.src = item.video;
             modalVideo.poster = item.poster;
             modal.classList.remove('hidden');
             modal.classList.add('flex');
+            modal.style.display = 'flex';
+            document.body.style.overflow = 'hidden';
             modalVideo.play().catch(() => {});
         });
     }
 
     if (modalClose && modal && modalVideo) {
-        modalClose.addEventListener('click', () => {
+        function closeMotionModal() {
             modal.classList.add('hidden');
             modal.classList.remove('flex');
+            modal.style.display = 'none';
+            document.body.style.overflow = '';
             modalVideo.pause();
+        }
+
+        modalClose.addEventListener('click', (e) => {
+            e.preventDefault();
+            closeMotionModal();
         });
         modal.addEventListener('click', (e) => {
-            if (e.target === modal) {
-                modal.classList.add('hidden');
-                modal.classList.remove('flex');
-                modalVideo.pause();
-            }
+            if (e.target === modal) closeMotionModal();
+        });
+        window.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape' && modal.style.display === 'flex') closeMotionModal();
         });
     }
 }
@@ -587,9 +614,39 @@ function initMobileNav() {
         document.body.style.overflow = '';
     }
 
-    menuBtn.addEventListener('click', openDrawer);
-    if (closeBtn) closeBtn.addEventListener('click', closeDrawer);
-    links.forEach(l => l.addEventListener('click', closeDrawer));
+    menuBtn.addEventListener('click', (e) => {
+        e.preventDefault();
+        e.stopPropagation();
+        openDrawer();
+    });
+
+    if (closeBtn) closeBtn.addEventListener('click', (e) => {
+        e.preventDefault();
+        e.stopPropagation();
+        closeDrawer();
+    });
+
+    links.forEach(l => {
+        l.addEventListener('click', (e) => {
+            const href = l.getAttribute('href');
+            closeDrawer();
+            if (href && href.startsWith('#')) {
+                e.preventDefault();
+                const target = document.querySelector(href);
+                if (target) {
+                    setTimeout(() => {
+                        target.scrollIntoView({ behavior: 'smooth' });
+                    }, 120);
+                }
+            }
+        });
+    });
+
+    drawer.addEventListener('click', (e) => {
+        if (e.target === drawer) {
+            closeDrawer();
+        }
+    });
 }
 
 /* ----------------------------------------------------
@@ -604,14 +661,19 @@ function initFaqAccordion() {
 
         if (!header || !content) return;
 
-        header.addEventListener('click', () => {
-            const isOpen = !content.classList.contains('hidden');
+        header.addEventListener('click', (e) => {
+            e.preventDefault();
+            const isOpen = !content.classList.contains('hidden') && content.style.display !== 'none';
             // Close all
-            document.querySelectorAll('.faq-answer').forEach(ans => ans.classList.add('hidden'));
+            document.querySelectorAll('.faq-answer').forEach(ans => {
+                ans.classList.add('hidden');
+                ans.style.display = 'none';
+            });
             document.querySelectorAll('.faq-icon').forEach(ic => ic.style.transform = 'rotate(0deg)');
 
             if (!isOpen) {
                 content.classList.remove('hidden');
+                content.style.display = 'block';
                 if (icon) icon.style.transform = 'rotate(180deg)';
             }
         });
@@ -670,36 +732,52 @@ function initEmbeddedFormModal() {
     const modal = document.getElementById('formModal');
     const iframe = document.getElementById('modalFormIframe');
     const closeBtn = document.getElementById('formModalClose');
-    const openButtons = document.querySelectorAll('.open-form-btn');
     const defaultUrl = 'https://n8n.agasty.cloud/form/0cb7287e-cd6f-48e4-9029-9852894f781b';
 
     if (!modal || !iframe) return;
 
     function openModal(customUrl) {
+        // Close mobile drawer if open
+        const drawer = document.getElementById('mobileNavDrawer');
+        if (drawer) {
+            drawer.classList.add('translate-x-full');
+        }
+
         const urlToLoad = customUrl || defaultUrl;
         if (iframe.src !== urlToLoad) {
             iframe.src = urlToLoad;
         }
         modal.classList.remove('hidden');
         modal.classList.add('flex');
+        modal.style.display = 'flex';
         document.body.style.overflow = 'hidden';
     }
 
     function closeModal() {
         modal.classList.add('hidden');
         modal.classList.remove('flex');
+        modal.style.display = 'none';
         document.body.style.overflow = '';
     }
 
-    openButtons.forEach(btn => {
-        btn.addEventListener('click', (e) => {
+    // Global event delegation on document so clicking any .open-form-btn or its inner children works 100%
+    document.addEventListener('click', (e) => {
+        const btn = e.target.closest('.open-form-btn');
+        if (btn) {
             e.preventDefault();
+            e.stopPropagation();
             const customUrl = btn.getAttribute('data-form-url');
             openModal(customUrl);
-        });
+        }
     });
 
-    if (closeBtn) closeBtn.addEventListener('click', closeModal);
+    if (closeBtn) {
+        closeBtn.addEventListener('click', (e) => {
+            e.preventDefault();
+            e.stopPropagation();
+            closeModal();
+        });
+    }
 
     modal.addEventListener('click', (e) => {
         if (e.target === modal) {
@@ -708,7 +786,7 @@ function initEmbeddedFormModal() {
     });
 
     window.addEventListener('keydown', (e) => {
-        if (e.key === 'Escape' && !modal.classList.contains('hidden')) {
+        if (e.key === 'Escape' && modal.style.display === 'flex') {
             closeModal();
         }
     });

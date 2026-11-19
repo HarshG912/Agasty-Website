@@ -194,8 +194,7 @@
 
                         <!-- Motion Video Playback Canvas -->
                         <div class="relative aspect-video w-full bg-black overflow-hidden flex items-center justify-center">
-                            <video id="heroMotionVideo" autoplay muted loop playsinline preload="auto" poster="assets/images/poster-3d-scroll.webp" class="w-full h-full object-cover transition-opacity duration-300">
-                                <source src="assets/videos/motion-3d-scroll.mp4" type="video/mp4">
+                            <video id="heroMotionVideo" src="assets/videos/motion-3d-scroll.mp4" autoplay muted loop playsinline preload="auto" poster="assets/images/poster-3d-scroll.webp" class="w-full h-full object-cover transition-opacity duration-300">
                                 Your browser does not support HTML5 video.
                             </video>
 
@@ -959,7 +958,7 @@
     </footer>
 
     <!-- Fullscreen Motion Video Modal -->
-    <div id="motionModal" class="fixed inset-0 z-50 bg-black/90 backdrop-blur-2xl hidden items-center justify-center p-4 md:p-10">
+    <div id="motionModal" class="fixed inset-0 z-[100] bg-black/90 backdrop-blur-2xl hidden items-center justify-center p-4 md:p-10">
         <div class="relative w-full max-w-5xl bg-slate-900 rounded-3xl overflow-hidden border border-white/20 shadow-2xl">
             <div class="p-4 bg-slate-950 flex justify-between items-center border-b border-white/10">
                 <span class="text-sm font-mono text-slate-300">Spatial Motion Viewer</span>
@@ -974,7 +973,7 @@
     </div>
 
     <!-- Embedded Consultation Form Modal -->
-    <div id="formModal" class="fixed inset-0 z-50 bg-slate-950/85 backdrop-blur-xl hidden items-center justify-center p-3 sm:p-6 md:p-10 transition-opacity duration-300">
+    <div id="formModal" class="fixed inset-0 z-[100] bg-slate-950/85 backdrop-blur-xl hidden items-center justify-center p-3 sm:p-6 md:p-10 transition-opacity duration-300">
         <div class="relative w-full max-w-4xl bg-slate-900 rounded-3xl overflow-hidden border border-white/20 shadow-2xl flex flex-col max-h-[92vh]">
             
             <!-- Window Titlebar -->

@@ -189,3 +189,22 @@ body {
     border-radius: 12px;
     border: 1px solid rgba(255, 255, 255, 0.08);
 }
+
+/* Fixed Navigation Scroll Margins */
+section[id] {
+    scroll-margin-top: 6rem;
+}
+
+/* Modal Reliability */
+#formModal.flex, #motionModal.flex {
+    display: flex !important;
+}
+
+#formModal.hidden, #motionModal.hidden {
+    display: none !important;
+}
+
+/* Pointer Cursor Enforcement for All Interactive Elements */
+button, a, input[type="range"], .estimator-option, .faq-question {
+    cursor: pointer;
+}
