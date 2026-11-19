@@ -13,6 +13,7 @@ document.addEventListener('DOMContentLoaded', () => {
     initMobileNav();
     initFaqAccordion();
     initStatsCounter();
+    initEmbeddedFormModal();
 });
 
 /* ----------------------------------------------------
@@ -541,7 +542,8 @@ function initProjectEstimator() {
 
         if (inquiryButton) {
             const selectedList = Array.from(selectedFeatures).join('+');
-            inquiryButton.href = `https://n8n.srv1090344.hstgr.cloud/form/0cb7287e-cd6f-48e4-9029-9852894f781b?tier=${encodeURIComponent(tier)}&features=${encodeURIComponent(selectedList)}`;
+            const targetUrl = `https://n8n.agasty.cloud/form/0cb7287e-cd6f-48e4-9029-9852894f781b?tier=${encodeURIComponent(tier)}&features=${encodeURIComponent(selectedList)}`;
+            inquiryButton.setAttribute('data-form-url', targetUrl);
         }
     }
 
@@ -659,4 +661,55 @@ function initStatsCounter() {
 
     const statsSection = document.getElementById('stats');
     if (statsSection) observer.observe(statsSection);
+}
+
+/* ----------------------------------------------------
+   9. Embedded Form Modal Controller
+   ---------------------------------------------------- */
+function initEmbeddedFormModal() {
+    const modal = document.getElementById('formModal');
+    const iframe = document.getElementById('modalFormIframe');
+    const closeBtn = document.getElementById('formModalClose');
+    const openButtons = document.querySelectorAll('.open-form-btn');
+    const defaultUrl = 'https://n8n.agasty.cloud/form/0cb7287e-cd6f-48e4-9029-9852894f781b';
+
+    if (!modal || !iframe) return;
+
+    function openModal(customUrl) {
+        const urlToLoad = customUrl || defaultUrl;
+        if (iframe.src !== urlToLoad) {
+            iframe.src = urlToLoad;
+        }
+        modal.classList.remove('hidden');
+        modal.classList.add('flex');
+        document.body.style.overflow = 'hidden';
+    }
+
+    function closeModal() {
+        modal.classList.add('hidden');
+        modal.classList.remove('flex');
+        document.body.style.overflow = '';
+    }
+
+    openButtons.forEach(btn => {
+        btn.addEventListener('click', (e) => {
+            e.preventDefault();
+            const customUrl = btn.getAttribute('data-form-url');
+            openModal(customUrl);
+        });
+    });
+
+    if (closeBtn) closeBtn.addEventListener('click', closeModal);
+
+    modal.addEventListener('click', (e) => {
+        if (e.target === modal) {
+            closeModal();
+        }
+    });
+
+    window.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape' && !modal.classList.contains('hidden')) {
+            closeModal();
+        }
+    });
 }

@@ -79,7 +79,7 @@ Visit `http://localhost:8080` in your web browser.
 ## 📬 Contact & Inquiries
 
 - **Official Website**: [agasty.cloud](https://agasty.cloud)
-- **Consultation Form**: [n8n Workflow Form](https://n8n.srv1090344.hstgr.cloud/form/0cb7287e-cd6f-48e4-9029-9852894f781b)
+- **Consultation Form**: [n8n Workflow Form](https://n8n.agasty.cloud/form/0cb7287e-cd6f-48e4-9029-9852894f781b)
 - **Direct Support**: [support@agasty.cloud](mailto:support@agasty.cloud)
 
 &copy; 2026 Agasty Enterprises. Devised for the intelligent era.
