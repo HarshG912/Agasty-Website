@@ -9,8 +9,8 @@ Official web platform for **Agasty Enterprises** ([agasty.cloud](https://agasty.
 ## 🚀 Key Highlights & Features
 
 - **Modern Glassmorphic Dark Architecture**: Built with Tailwind CSS, custom glass panels, neon gradient accents, and obsidian dark aesthetics.
-- **Interactive Motion Graphics (Powered by [Prompt Motion](https://prompt-motion.com))**:
-  - Live embedded 60fps AI-choreographed motion videos showcasing 3D spatial viewports, UI state morphing, abstract cybernetic flows, and kinetic typography.
+- **Interactive Motion Visuals**:
+  - Embedded 60fps high-definition motion videos showcasing 3D spatial viewports, UI state morphing, abstract cybernetic flows, and kinetic typography.
   - Video progress tracking, sound toggle, clip switching tabs, and fullscreen modal player.
 - **Live Deflection Physics Simulator**:
   - Real-time interactive Euler-Bernoulli cantilever beam deflection simulator on HTML5 canvas.
@@ -37,7 +37,7 @@ Official web platform for **Agasty Enterprises** ([agasty.cloud](https://agasty.
 │   │   └── style.css            # Custom animations, glassmorphism, glowing borders & marquee
 │   ├── js/
 │   │   └── main.js              # Background particle canvas, video reel, physics simulator & estimator
-│   ├── videos/                  # AI motion graphics loops from prompt-motion.com
+│   ├── videos/                  # High-definition UI motion graphics loops
 │   │   ├── motion-3d-scroll.mp4
 │   │   ├── motion-ui-states.mp4
 │   │   ├── motion-abstract-cyber.mp4

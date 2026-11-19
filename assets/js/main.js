@@ -121,58 +121,48 @@ function initParticleCanvas() {
 }
 
 /* ----------------------------------------------------
-   2. Motion Graphics Reel (Prompt Motion Powered)
+   2. Motion Graphics Reel
    ---------------------------------------------------- */
 const MOTION_LIBRARY = [
     {
         id: '3d-scroll',
-        title: '3D Spatial Scroll & Morph',
+        title: '3D Spatial Interface',
         tag: 'Spatial UI • Kinetic Physics',
         desc: 'Interactive 3D viewport scrolling with continuous particle morphing, modeled after generative spatial interfaces.',
         video: 'assets/videos/motion-3d-scroll.mp4',
-        fallbackVideo: 'https://media.prompt-motion.com/twoclipping-d89be5/preview.c850b28b.mp4',
-        poster: 'assets/images/poster-3d-scroll.webp',
-        sourceUrl: 'https://prompt-motion.com'
+        poster: 'assets/images/poster-3d-scroll.webp'
     },
     {
         id: 'ui-states',
-        title: 'Shape Morphing through UI States',
+        title: 'Shape Morphing UI States',
         tag: 'Product UI • State Transitions',
         desc: 'Seamless dimensional vector shifts between operational graphs, data nodes, and analytical widgets.',
         video: 'assets/videos/motion-ui-states.mp4',
-        fallbackVideo: 'https://media.prompt-motion.com/twoclipping-opus-5-5-is-f-cking/preview.bb2087aa.mp4',
-        poster: 'assets/images/motion-ui-states.webp',
-        sourceUrl: 'https://prompt-motion.com'
+        poster: 'assets/images/motion-ui-states.webp'
     },
     {
         id: 'abstract-cyber',
-        title: 'Cybernetic Flow & Abstract Particles',
-        tag: 'Generative AI • Motion Reel',
+        title: 'Cybernetic Particle Stream',
+        tag: 'Visual Flow • Dynamic Light',
         desc: 'Fluid dynamics combined with quantum light refraction, showcasing autonomous motion algorithms.',
         video: 'assets/videos/motion-abstract-cyber.mp4',
-        fallbackVideo: 'https://media.prompt-motion.com/ajith-io-wtf-made-with-claude/preview.be547d28.mp4',
-        poster: 'assets/images/motion-abstract-cyber.webp',
-        sourceUrl: 'https://prompt-motion.com'
+        poster: 'assets/images/motion-abstract-cyber.webp'
     },
     {
         id: 'superx',
-        title: 'SuperX Feature Release & Kinetic 3D',
-        tag: 'SaaS Teaser • Dimensional Rendering',
+        title: 'Kinetic Release Sequence',
+        tag: 'Spatial Typography • Interface Rendering',
         desc: 'High-contrast spatial typography coupled with hardware acceleration and synchronized velocity vectors.',
         video: 'assets/videos/motion-superx.mp4',
-        fallbackVideo: 'https://media.prompt-motion.com/robj3d3-opus-5-5-max-effort/preview.3d780c26.mp4',
-        poster: 'assets/images/motion-superx.webp',
-        sourceUrl: 'https://prompt-motion.com'
+        poster: 'assets/images/motion-superx.webp'
     },
     {
         id: 'kinetic-type',
-        title: 'Bold Kinetic Type Showreel',
-        tag: 'Kinetic Type • Dynamic Rhythms',
-        desc: 'Multi-layer typographic pacing driven by Claude Opus motion choreography prompts.',
+        title: 'Dynamic Kinetic Typography',
+        tag: 'Kinetic Type • Fluid Rhythms',
+        desc: 'Multi-layer typographic pacing driven by kinetic typography and reactive layout choreography.',
         video: 'assets/videos/motion-kinetic-type.mp4',
-        fallbackVideo: 'https://media.prompt-motion.com/shneural-after-opus-5-5-it/preview.d43a1cfa.mp4',
-        poster: 'assets/images/motion-kinetic-type.webp',
-        sourceUrl: 'https://prompt-motion.com'
+        poster: 'assets/images/motion-kinetic-type.webp'
     }
 ];
 
@@ -257,14 +247,9 @@ function initMotionReel() {
         loadMotion(nextIndex);
     });
 
-    // Fallback on error to prompt-motion direct CDN
-    videoEl.addEventListener('error', () => {
-        const item = MOTION_LIBRARY[currentIndex];
-        if (item && videoEl.src !== item.fallbackVideo) {
-            console.warn('Local video load failed, switching to CDN fallback:', item.fallbackVideo);
-            videoEl.src = item.fallbackVideo;
-            videoEl.play().catch(() => {});
-        }
+    // Error handling
+    videoEl.addEventListener('error', (e) => {
+        console.warn('Video failed to play:', e);
     });
 
     // Controls

@@ -70,10 +70,6 @@
                     <span>Live Simulator</span>
                     <span class="px-1.5 py-0.5 text-[10px] bg-blue-500/20 text-blue-400 border border-blue-500/30 rounded font-mono">NEW</span>
                 </a>
-                <a href="#motion-lab" class="hover:text-blue-400 transition-colors flex items-center gap-1.5">
-                    <span>Motion Lab</span>
-                    <span class="px-1.5 py-0.5 text-[10px] bg-purple-500/20 text-purple-400 border border-purple-500/30 rounded font-mono">AI</span>
-                </a>
                 <a href="#estimator" class="hover:text-blue-400 transition-colors">Estimator</a>
                 <a href="#contact" class="hover:text-blue-400 transition-colors">Contact</a>
             </nav>
@@ -112,7 +108,6 @@
                 <a href="#capabilities" class="mobile-nav-link hover:text-blue-400 transition-colors">Capabilities</a>
                 <a href="#portfolio" class="mobile-nav-link hover:text-blue-400 transition-colors">Portfolio</a>
                 <a href="#simulator" class="mobile-nav-link hover:text-blue-400 transition-colors">Deflection Simulator</a>
-                <a href="#motion-lab" class="mobile-nav-link hover:text-blue-400 transition-colors">Motion Lab (Prompt Motion)</a>
                 <a href="#estimator" class="mobile-nav-link hover:text-blue-400 transition-colors">Project Estimator</a>
                 <a href="#contact" class="mobile-nav-link hover:text-blue-400 transition-colors">Contact & Inquiries</a>
             </nav>
@@ -173,7 +168,7 @@
                     </div>
                 </div>
 
-                <!-- Interactive Hero Motion Graphics Reel Showcase (Powered by Prompt Motion) -->
+                <!-- Interactive Hero Motion Visuals Reel -->
                 <div class="relative max-w-5xl mx-auto mt-6">
                     <!-- Glowing Backlight -->
                     <div class="absolute -inset-1.5 bg-gradient-to-r from-blue-600 via-indigo-600 to-purple-600 rounded-3xl blur-2xl opacity-30 animate-pulse-glow"></div>
@@ -187,10 +182,10 @@
                                 <span class="w-3 h-3 rounded-full bg-red-500/80"></span>
                                 <span class="w-3 h-3 rounded-full bg-yellow-500/80"></span>
                                 <span class="w-3 h-3 rounded-full bg-green-500/80"></span>
-                                <span class="ml-3 text-xs font-mono text-slate-400">agasty-motion-engine://prompt-motion-feed</span>
+                                <span class="ml-3 text-xs font-mono text-slate-400">agasty-core://spatial-ui-preview</span>
                             </div>
                             <div class="flex items-center gap-3 text-xs text-slate-400 font-mono">
-                                <span class="hidden md:inline px-2 py-0.5 rounded bg-blue-950/60 border border-blue-500/30 text-blue-300">Claude Opus &middot; AI Motion</span>
+                                <span class="hidden md:inline px-2 py-0.5 rounded bg-blue-950/60 border border-blue-500/30 text-blue-300">Spatial UI &middot; Kinetic Flow</span>
                                 <button id="openMotionModal" title="Fullscreen View" class="hover:text-white transition">
                                     <i class="fas fa-expand"></i>
                                 </button>
@@ -201,7 +196,6 @@
                         <div class="relative aspect-video w-full bg-black overflow-hidden flex items-center justify-center">
                             <video id="heroMotionVideo" autoplay muted loop playsinline preload="auto" poster="assets/images/poster-3d-scroll.webp" class="w-full h-full object-cover transition-opacity duration-300">
                                 <source src="assets/videos/motion-3d-scroll.mp4" type="video/mp4">
-                                <source src="https://media.prompt-motion.com/twoclipping-d89be5/preview.c850b28b.mp4" type="video/mp4">
                                 Your browser does not support HTML5 video.
                             </video>
 
@@ -240,8 +234,8 @@
                         <!-- Motion Graphics Switcher Tabs -->
                         <div class="p-4 bg-slate-950/90 border-t border-white/[0.08] overflow-x-auto">
                             <div class="text-[11px] font-mono text-slate-500 uppercase tracking-wider mb-2 flex items-center justify-between">
-                                <span>Curated Motion Showcase (Prompt Motion Library)</span>
-                                <span>Click clip to inspect</span>
+                                <span>Motion Visuals Suite</span>
+                                <span>Select clip to view</span>
                             </div>
                             <div id="motionTabs" class="flex items-center gap-2 min-w-max">
                                 <!-- Populated dynamically by main.js -->
@@ -705,112 +699,6 @@
             </div>
         </section>
 
-        <!-- Motion Lab: Prompt Motion Integration Section -->
-        <section id="motion-lab" class="py-24 px-6 border-t border-white/[0.06] bg-slate-950/80">
-            <div class="max-w-7xl mx-auto">
-                <div class="flex flex-col md:flex-row md:items-end justify-between mb-16 gap-6">
-                    <div>
-                        <div class="inline-flex items-center gap-2 px-3 py-1 rounded-md bg-purple-500/10 border border-purple-500/20 text-purple-400 text-xs font-mono font-semibold uppercase mb-3">
-                            <i class="fas fa-film"></i> Generative Motion Design
-                        </div>
-                        <h2 class="text-4xl md:text-5xl font-black tracking-tight">
-                            Motion Lab &times; <span class="gradient-text">Prompt Motion</span>
-                        </h2>
-                        <p class="text-slate-400 mt-3 text-base md:text-lg max-w-2xl">
-                            We blend AI-orchestrated motion choreography with computational code. Explore select motion graphics generated with next-gen models, featured from the Prompt Motion repository:
-                        </p>
-                    </div>
-                    <div>
-                        <a href="https://prompt-motion.com" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 px-4 py-2 rounded-xl bg-slate-900 border border-slate-700 text-slate-300 hover:text-white hover:border-slate-500 text-xs font-mono transition">
-                            <span>Explore prompt-motion.com</span>
-                            <i class="fas fa-external-link-alt text-[10px]"></i>
-                        </a>
-                    </div>
-                </div>
-
-                <!-- Motion Cards Grid -->
-                <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
-                    
-                    <!-- Motion Item 1 -->
-                    <div class="rounded-2xl overflow-hidden glass-card border border-white/10 group flex flex-col justify-between">
-                        <div class="relative aspect-square overflow-hidden bg-black">
-                            <video autoplay muted loop playsinline poster="assets/images/motion-ui-states.webp" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
-                                <source src="assets/videos/motion-ui-states.mp4" type="video/mp4">
-                                <source src="https://media.prompt-motion.com/twoclipping-opus-5-5-is-f-cking/preview.bb2087aa.mp4" type="video/mp4">
-                            </video>
-                            <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent pointer-events-none"></div>
-                            <span class="absolute top-3 left-3 text-[10px] font-mono px-2 py-0.5 rounded bg-blue-900/80 border border-blue-400/30 text-blue-300">
-                                PRODUCT UI
-                            </span>
-                        </div>
-                        <div class="p-5">
-                            <h4 class="font-bold text-base text-white mb-1">Shape Morphing UI States</h4>
-                            <p class="text-xs text-slate-400 mb-3">Fluid transitions between analytical dashboard states and vector charts.</p>
-                            <div class="text-[11px] font-mono text-slate-500">PROMPT: Claude Opus 5.5 UI Physics</div>
-                        </div>
-                    </div>
-
-                    <!-- Motion Item 2 -->
-                    <div class="rounded-2xl overflow-hidden glass-card border border-white/10 group flex flex-col justify-between">
-                        <div class="relative aspect-square overflow-hidden bg-black">
-                            <video autoplay muted loop playsinline poster="assets/images/motion-abstract-cyber.webp" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
-                                <source src="assets/videos/motion-abstract-cyber.mp4" type="video/mp4">
-                                <source src="https://media.prompt-motion.com/ajith-io-wtf-made-with-claude/preview.be547d28.mp4" type="video/mp4">
-                            </video>
-                            <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent pointer-events-none"></div>
-                            <span class="absolute top-3 left-3 text-[10px] font-mono px-2 py-0.5 rounded bg-purple-900/80 border border-purple-400/30 text-purple-300">
-                                CYBERNETIC
-                            </span>
-                        </div>
-                        <div class="p-5">
-                            <h4 class="font-bold text-base text-white mb-1">Abstract Motion Reel</h4>
-                            <p class="text-xs text-slate-400 mb-3">Light refraction and synchronized multi-dimensional particle streams.</p>
-                            <div class="text-[11px] font-mono text-slate-500">PROMPT: Quantum Light Particles</div>
-                        </div>
-                    </div>
-
-                    <!-- Motion Item 3 -->
-                    <div class="rounded-2xl overflow-hidden glass-card border border-white/10 group flex flex-col justify-between">
-                        <div class="relative aspect-square overflow-hidden bg-black">
-                            <video autoplay muted loop playsinline poster="assets/images/motion-superx.webp" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
-                                <source src="assets/videos/motion-superx.mp4" type="video/mp4">
-                                <source src="https://media.prompt-motion.com/robj3d3-opus-5-5-max-effort/preview.3d780c26.mp4" type="video/mp4">
-                            </video>
-                            <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent pointer-events-none"></div>
-                            <span class="absolute top-3 left-3 text-[10px] font-mono px-2 py-0.5 rounded bg-emerald-900/80 border border-emerald-400/30 text-emerald-300">
-                                SPATIAL 3D
-                            </span>
-                        </div>
-                        <div class="p-5">
-                            <h4 class="font-bold text-base text-white mb-1">SuperX Feature Release</h4>
-                            <p class="text-xs text-slate-400 mb-3">3D camera sweeps around geometric typography and release counters.</p>
-                            <div class="text-[11px] font-mono text-slate-500">PROMPT: 3D Camera Orbit &amp; Glass</div>
-                        </div>
-                    </div>
-
-                    <!-- Motion Item 4 -->
-                    <div class="rounded-2xl overflow-hidden glass-card border border-white/10 group flex flex-col justify-between">
-                        <div class="relative aspect-square overflow-hidden bg-black">
-                            <video autoplay muted loop playsinline poster="assets/images/motion-kinetic-type.webp" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
-                                <source src="assets/videos/motion-kinetic-type.mp4" type="video/mp4">
-                                <source src="https://media.prompt-motion.com/shneural-after-opus-5-5-it/preview.d43a1cfa.mp4" type="video/mp4">
-                            </video>
-                            <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent pointer-events-none"></div>
-                            <span class="absolute top-3 left-3 text-[10px] font-mono px-2 py-0.5 rounded bg-pink-900/80 border border-pink-400/30 text-pink-300">
-                                KINETIC TYPE
-                            </span>
-                        </div>
-                        <div class="p-5">
-                            <h4 class="font-bold text-base text-white mb-1">Bold Typographic Pacing</h4>
-                            <p class="text-xs text-slate-400 mb-3">Rhythmic kinetic lettering designed for high-impact visual communication.</p>
-                            <div class="text-[11px] font-mono text-slate-500">PROMPT: High Contrast Kinetic Reel</div>
-                        </div>
-                    </div>
-
-                </div>
-            </div>
-        </section>
-
         <!-- Interactive Project Estimator & Scope Configurator -->
         <section id="estimator" class="py-24 px-6 border-t border-white/[0.06] relative">
             <div class="max-w-5xl mx-auto">
@@ -1027,9 +915,6 @@
                 <p class="text-slate-500 text-sm">
                     &copy; 2026 Agasty Enterprises. Devised for the intelligent era. All rights reserved.
                 </p>
-                <div class="mt-2 text-xs text-slate-600 font-mono">
-                    Motion design powered in synergy with <a href="https://prompt-motion.com" target="_blank" rel="noopener noreferrer" class="text-slate-400 hover:text-white underline">Prompt Motion</a>.
-                </div>
             </div>
 
             <!-- Links & Compliance -->
@@ -1053,7 +938,7 @@
     <div id="motionModal" class="fixed inset-0 z-50 bg-black/90 backdrop-blur-2xl hidden items-center justify-center p-4 md:p-10">
         <div class="relative w-full max-w-5xl bg-slate-900 rounded-3xl overflow-hidden border border-white/20 shadow-2xl">
             <div class="p-4 bg-slate-950 flex justify-between items-center border-b border-white/10">
-                <span class="text-sm font-mono text-slate-300">Prompt Motion HD Viewer</span>
+                <span class="text-sm font-mono text-slate-300">Spatial Motion Viewer</span>
                 <button id="modalClose" aria-label="Close Modal" class="w-8 h-8 rounded-lg bg-slate-800 text-slate-300 hover:text-white flex items-center justify-center">
                     <i class="fas fa-times"></i>
                 </button>
