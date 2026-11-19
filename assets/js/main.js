@@ -5,15 +5,15 @@
  */
 
 function initApp() {
-    initParticleCanvas();
-    initMotionReel();
-    initDeflectionSimulator();
-    initProjectEstimator();
-    initSpotlight();
-    initMobileNav();
-    initFaqAccordion();
-    initStatsCounter();
-    initEmbeddedFormModal();
+    try { initParticleCanvas(); } catch (e) { console.warn('initParticleCanvas error:', e); }
+    try { initMotionReel(); } catch (e) { console.warn('initMotionReel error:', e); }
+    try { initDeflectionSimulator(); } catch (e) { console.warn('initDeflectionSimulator error:', e); }
+    try { initProjectEstimator(); } catch (e) { console.warn('initProjectEstimator error:', e); }
+    try { initSpotlight(); } catch (e) { console.warn('initSpotlight error:', e); }
+    try { initMobileNav(); } catch (e) { console.warn('initMobileNav error:', e); }
+    try { initFaqAccordion(); } catch (e) { console.warn('initFaqAccordion error:', e); }
+    try { initStatsCounter(); } catch (e) { console.warn('initStatsCounter error:', e); }
+    try { initEmbeddedFormModal(); } catch (e) { console.warn('initEmbeddedFormModal error:', e); }
 }
 
 if (document.readyState === 'loading') {
@@ -201,11 +201,10 @@ function initMotionReel() {
         setTimeout(() => {
             videoEl.src = item.video;
             videoEl.poster = item.poster;
-            videoEl.muted = true;
             videoEl.load();
             videoEl.play().catch(() => {});
             videoEl.style.opacity = '1';
-        }, 120);
+        }, 150);
 
         if (titleEl) titleEl.textContent = item.title;
         if (tagEl) tagEl.textContent = item.tag;
@@ -231,16 +230,13 @@ function initMotionReel() {
         tabsContainer.innerHTML = '';
         MOTION_LIBRARY.forEach((item, index) => {
             const btn = document.createElement('button');
-            btn.className = `px-3.5 py-2 text-xs font-semibold rounded-lg border transition-all flex items-center gap-2 cursor-pointer ${
+            btn.className = `px-3.5 py-2 text-xs font-semibold rounded-lg border transition-all flex items-center gap-2 ${
                 index === 0
                     ? 'bg-blue-600/30 border-blue-500 text-white'
                     : 'bg-slate-800/50 border-slate-700/60 text-slate-400 hover:text-white hover:bg-slate-800'
             }`;
             btn.innerHTML = `<span class="w-1.5 h-1.5 rounded-full ${index === 0 ? 'bg-blue-400' : 'bg-slate-500'}"></span> ${item.title}`;
-            btn.addEventListener('click', (e) => {
-                e.preventDefault();
-                loadMotion(index);
-            });
+            btn.addEventListener('click', () => loadMotion(index));
             tabsContainer.appendChild(btn);
         });
     }
@@ -272,7 +268,7 @@ function initMotionReel() {
     // Controls
     if (playPauseBtn) {
         playPauseBtn.addEventListener('click', (e) => {
-            e.preventDefault();
+            if (e && e.preventDefault) e.preventDefault();
             if (videoEl.paused) {
                 videoEl.play();
                 playPauseBtn.innerHTML = '<i class="fas fa-pause"></i>';
@@ -285,7 +281,7 @@ function initMotionReel() {
 
     if (muteBtn) {
         muteBtn.addEventListener('click', (e) => {
-            e.preventDefault();
+            if (e && e.preventDefault) e.preventDefault();
             videoEl.muted = !videoEl.muted;
             muteBtn.innerHTML = videoEl.muted ? '<i class="fas fa-volume-mute"></i>' : '<i class="fas fa-volume-up"></i>';
         });
@@ -294,36 +290,36 @@ function initMotionReel() {
     // Modal preview
     if (openModalBtn && modal && modalVideo) {
         openModalBtn.addEventListener('click', (e) => {
-            e.preventDefault();
+            if (e && e.preventDefault) e.preventDefault();
             const item = MOTION_LIBRARY[currentIndex];
             modalVideo.src = item.video;
             modalVideo.poster = item.poster;
             modal.classList.remove('hidden');
             modal.classList.add('flex');
-            modal.style.display = 'flex';
+            modal.style.setProperty('display', 'flex', 'important');
             document.body.style.overflow = 'hidden';
             modalVideo.play().catch(() => {});
         });
     }
 
     if (modalClose && modal && modalVideo) {
-        function closeMotionModal() {
+        function closeMotionModal(e) {
+            if (e && e.preventDefault) e.preventDefault();
             modal.classList.add('hidden');
             modal.classList.remove('flex');
-            modal.style.display = 'none';
+            modal.style.setProperty('display', 'none', 'important');
             document.body.style.overflow = '';
             modalVideo.pause();
         }
 
-        modalClose.addEventListener('click', (e) => {
-            e.preventDefault();
-            closeMotionModal();
-        });
+        modalClose.addEventListener('click', closeMotionModal);
         modal.addEventListener('click', (e) => {
-            if (e.target === modal) closeMotionModal();
+            if (e.target === modal) closeMotionModal(e);
         });
         window.addEventListener('keydown', (e) => {
-            if (e.key === 'Escape' && modal.style.display === 'flex') closeMotionModal();
+            if (e.key === 'Escape' && modal.style.display !== 'none' && !modal.classList.contains('hidden')) {
+                closeMotionModal(e);
+            }
         });
     }
 }
@@ -620,11 +616,13 @@ function initMobileNav() {
         openDrawer();
     });
 
-    if (closeBtn) closeBtn.addEventListener('click', (e) => {
-        e.preventDefault();
-        e.stopPropagation();
-        closeDrawer();
-    });
+    if (closeBtn) {
+        closeBtn.addEventListener('click', (e) => {
+            e.preventDefault();
+            e.stopPropagation();
+            closeDrawer();
+        });
+    }
 
     links.forEach(l => {
         l.addEventListener('click', (e) => {
@@ -744,23 +742,40 @@ function initEmbeddedFormModal() {
         }
 
         const urlToLoad = customUrl || defaultUrl;
-        if (iframe.src !== urlToLoad) {
+        if (!iframe.src || iframe.src === 'about:blank' || (customUrl && iframe.src !== urlToLoad)) {
             iframe.src = urlToLoad;
         }
         modal.classList.remove('hidden');
         modal.classList.add('flex');
-        modal.style.display = 'flex';
+        modal.style.cssText = 'display: flex !important; position: fixed !important; inset: 0 !important; z-index: 99999 !important;';
         document.body.style.overflow = 'hidden';
     }
 
     function closeModal() {
         modal.classList.add('hidden');
         modal.classList.remove('flex');
-        modal.style.display = 'none';
+        modal.style.cssText = 'display: none !important;';
         document.body.style.overflow = '';
     }
 
-    // Global event delegation on document so clicking any .open-form-btn or its inner children works 100%
+    // Expose globally so inline onclick or other scripts can call them directly
+    window.openConsultationModal = function(e, customUrl) {
+        if (e) {
+            if (e.preventDefault) e.preventDefault();
+            if (e.stopPropagation) e.stopPropagation();
+        }
+        openModal(customUrl);
+    };
+
+    window.closeConsultationModal = function(e) {
+        if (e) {
+            if (e.preventDefault) e.preventDefault();
+            if (e.stopPropagation) e.stopPropagation();
+        }
+        closeModal();
+    };
+
+    // Global document-level click delegation for .open-form-btn
     document.addEventListener('click', (e) => {
         const btn = e.target.closest('.open-form-btn');
         if (btn) {
@@ -786,7 +801,7 @@ function initEmbeddedFormModal() {
     });
 
     window.addEventListener('keydown', (e) => {
-        if (e.key === 'Escape' && modal.style.display === 'flex') {
+        if (e.key === 'Escape' && modal.style.display !== 'none' && !modal.classList.contains('hidden')) {
             closeModal();
         }
     });
