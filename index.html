@@ -9,6 +9,10 @@
         content="Agasty Enterprises architects intelligent applications, precision sensor platforms, and autonomous AI systems that solve complex challenges through elegant code.">
     <meta name="theme-color" content="#030712">
 
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="assets/images/favicon.svg">
+    <link rel="apple-touch-icon" href="assets/images/favicon.svg">
+
     <!-- Open Graph / Meta -->
     <meta property="og:type" content="website">
     <meta property="og:title" content="Agasty Enterprises | Advanced App Dev & AI Solutions">
@@ -106,10 +110,32 @@
     <header class="fixed top-0 left-0 w-full z-50 glass border-b border-white/[0.07] transition-all duration-300">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 py-3.5 flex justify-between items-center gap-4 lg:gap-8">
             <!-- Brand Logo -->
-            <a href="#home" class="flex items-center gap-3 group flex-shrink-0">
+            <a href="#home" class="flex items-center gap-3 group flex-shrink-0" aria-label="Agasty Cloud Home">
                 <div
-                    class="w-10 h-10 rounded-xl bg-gradient-to-tr from-blue-600 via-indigo-600 to-purple-600 flex items-center justify-center shadow-lg shadow-blue-500/25 group-hover:scale-105 transition-transform duration-300">
-                    <i class="fas fa-cube text-white text-lg"></i>
+                    class="w-10 h-10 rounded-xl bg-slate-900 border border-blue-500/30 flex items-center justify-center p-2 shadow-lg shadow-blue-500/20 group-hover:border-blue-400 group-hover:shadow-blue-500/40 group-hover:scale-105 transition-all duration-300">
+                    <svg class="w-full h-full drop-shadow-[0_0_8px_rgba(59,130,246,0.5)]" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <defs>
+                            <linearGradient id="nav-logo-left" x1="16" y1="84" x2="48" y2="14" gradientUnits="userSpaceOnUse">
+                                <stop offset="0%" stop-color="#06b6d4"/>
+                                <stop offset="50%" stop-color="#2563eb"/>
+                                <stop offset="100%" stop-color="#38bdf8"/>
+                            </linearGradient>
+                            <linearGradient id="nav-logo-right" x1="52" y1="14" x2="84" y2="84" gradientUnits="userSpaceOnUse">
+                                <stop offset="0%" stop-color="#38bdf8"/>
+                                <stop offset="50%" stop-color="#6366f1"/>
+                                <stop offset="100%" stop-color="#4f46e5"/>
+                            </linearGradient>
+                            <linearGradient id="nav-logo-core" x1="36" y1="54" x2="64" y2="54" gradientUnits="userSpaceOnUse">
+                                <stop offset="0%" stop-color="#ffffff"/>
+                                <stop offset="100%" stop-color="#38bdf8"/>
+                            </linearGradient>
+                        </defs>
+                        <path d="M 18 84 L 46 15 C 47.5 12.5 50 12.5 50 12.5 L 42 42 L 31 84 Z" fill="url(#nav-logo-left)"/>
+                        <path d="M 50 12.5 C 50 12.5 52.5 12.5 54 15 L 82 84 L 69 84 L 58 42 Z" fill="url(#nav-logo-right)"/>
+                        <polygon points="50,40 64,54 50,68 36,54" fill="url(#nav-logo-core)"/>
+                        <polygon points="50,46 56,54 50,62 44,54" fill="#030712"/>
+                        <circle cx="50" cy="54" r="2.2" fill="#ffffff"/>
+                    </svg>
                 </div>
                 <div class="text-xl font-extrabold tracking-tight whitespace-nowrap">
                     AGASTY<span class="text-blue-500">.CLOUD</span>
@@ -157,7 +183,12 @@
         class="fixed inset-0 z-50 glass translate-x-full transition-transform duration-300 lg:hidden flex flex-col justify-between p-8">
         <div>
             <div class="flex justify-between items-center mb-10">
-                <div class="text-xl font-extrabold tracking-tight">AGASTY<span class="text-blue-500">.CLOUD</span></div>
+                <div class="flex items-center gap-3">
+                    <div class="w-9 h-9 rounded-xl bg-slate-900 border border-blue-500/30 flex items-center justify-center p-1.5 shadow-md shadow-blue-500/20">
+                        <img src="assets/images/logo.svg" alt="Agasty Logo" class="w-full h-full">
+                    </div>
+                    <div class="text-xl font-extrabold tracking-tight">AGASTY<span class="text-blue-500">.CLOUD</span></div>
+                </div>
                 <button id="mobileCloseBtn" aria-label="Close Navigation"
                     class="p-2 rounded-lg bg-slate-800 text-slate-300">
                     <i class="fas fa-times text-xl"></i>
@@ -1080,8 +1111,8 @@
         <div class="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center gap-10">
             <div class="text-center md:text-left">
                 <div class="flex items-center gap-3 justify-center md:justify-start mb-2">
-                    <div class="w-8 h-8 rounded-lg bg-blue-600 flex items-center justify-center text-white text-sm">
-                        <i class="fas fa-cube"></i>
+                    <div class="w-8 h-8 rounded-lg bg-slate-900 border border-blue-500/30 flex items-center justify-center p-1.5 shadow-md shadow-blue-500/20">
+                        <img src="assets/images/logo.svg" alt="Agasty Logo" class="w-full h-full">
                     </div>
                     <div class="text-2xl font-extrabold text-white tracking-tight">AGASTY<span
                             class="text-blue-500">.CLOUD</span></div>
